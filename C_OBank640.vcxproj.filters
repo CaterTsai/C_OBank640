@@ -136,24 +136,6 @@
     <ClCompile Include="..\..\..\addons\ofxLayerMask\src\ofxLayerMask.cpp">
       <Filter>addons\ofxLayerMask\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxLayerMask\src\shader\alphaMask_ES2.frag">
-      <Filter>addons\ofxLayerMask\src\shader</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxLayerMask\src\shader\alphaMask_ES2.vert">
-      <Filter>addons\ofxLayerMask\src\shader</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxLayerMask\src\shader\alphaMask_GL2.frag">
-      <Filter>addons\ofxLayerMask\src\shader</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxLayerMask\src\shader\alphaMask_GL2.vert">
-      <Filter>addons\ofxLayerMask\src\shader</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxLayerMask\src\shader\alphaMask_GL3.frag">
-      <Filter>addons\ofxLayerMask\src\shader</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxLayerMask\src\shader\alphaMask_GL3.vert">
-      <Filter>addons\ofxLayerMask\src\shader</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxPostProcessing\src\BleachBypassPass.cpp">
       <Filter>addons\ofxPostProcessing\src</Filter>
     </ClCompile>
@@ -274,6 +256,12 @@
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp">
       <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\milightCueTable.cpp">
+      <Filter>src\millight</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxPanelEx.cpp">
+      <Filter>src\millight</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -314,9 +302,6 @@
     </Filter>
     <Filter Include="addons\ofxLayerMask\src">
       <UniqueIdentifier>{42A1695C-5BF0-8BB9-F2AE-187F}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxLayerMask\src\shader">
-      <UniqueIdentifier>{DD024A8A-16EC-89EC-1F3A-5D69}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxPostProcessing">
       <UniqueIdentifier>{AB514210-24FF-87A6-AE4B-9AE5}</UniqueIdentifier>
@@ -637,6 +622,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h">
       <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\milightCueTable.h">
+      <Filter>src\millight</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxPanelEx.h">
+      <Filter>src\millight</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

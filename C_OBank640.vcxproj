@@ -182,6 +182,7 @@
     <ClCompile Include="..\..\myApps\testDMX\src\HD512\ofxCTHD512.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\milightCtrl.cpp" />
+    <ClCompile Include="src\milightCueTable.cpp" />
     <ClCompile Include="src\milightMgr.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="..\..\..\addons\ofxAnimatable\src\ofxAnimatable.cpp" />
@@ -227,12 +228,6 @@
     <ClCompile Include="..\..\..\addons\ofxDSHapVideoPlayer\libs\External\snappy\snappy-stubs-internal.cc" />
     <ClCompile Include="..\..\..\addons\ofxDSHapVideoPlayer\libs\External\snappy\snappy.cc" />
     <ClCompile Include="..\..\..\addons\ofxLayerMask\src\ofxLayerMask.cpp" />
-    <ClCompile Include="..\..\..\addons\ofxLayerMask\src\shader\alphaMask_ES2.frag" />
-    <ClCompile Include="..\..\..\addons\ofxLayerMask\src\shader\alphaMask_ES2.vert" />
-    <ClCompile Include="..\..\..\addons\ofxLayerMask\src\shader\alphaMask_GL2.frag" />
-    <ClCompile Include="..\..\..\addons\ofxLayerMask\src\shader\alphaMask_GL2.vert" />
-    <ClCompile Include="..\..\..\addons\ofxLayerMask\src\shader\alphaMask_GL3.frag" />
-    <ClCompile Include="..\..\..\addons\ofxLayerMask\src\shader\alphaMask_GL3.vert" />
     <ClCompile Include="..\..\..\addons\ofxPostProcessing\src\BleachBypassPass.cpp" />
     <ClCompile Include="..\..\..\addons\ofxPostProcessing\src\BloomPass.cpp" />
     <ClCompile Include="..\..\..\addons\ofxPostProcessing\src\ContrastPass.cpp" />
@@ -262,6 +257,7 @@
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.cpp" />
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
+    <ClCompile Include="src\ofxPanelEx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxBaseGui.h" />
@@ -277,6 +273,7 @@
     <ClInclude Include="..\..\myApps\testDMX\src\HD512\ofxCTHD512.h" />
     <ClInclude Include="src\milightCtrl.h" />
     <ClInclude Include="src\milightCue.h" />
+    <ClInclude Include="src\milightCueTable.h" />
     <ClInclude Include="src\milightMgr.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\addons\ofxAnimatable\src\ofxAnimatable.h" />
@@ -361,6 +358,7 @@
     <ClInclude Include="..\..\..\addons\ofxPostProcessing\src\ZoomBlurPass.h" />
     <ClInclude Include="..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
     <ClInclude Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.h" />
+    <ClInclude Include="src\ofxPanelEx.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">

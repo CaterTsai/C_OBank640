@@ -1,11 +1,10 @@
 #pragma once
 
-#include "ofxXmlSettings.h"
-#include "ofxGui.h"
+
 #include "milightCtrl.h"
 #include "milightCue.h"
 
-typedef vector<milightCue> milightCueTable;
+
 
 class milightMgr
 {
@@ -14,36 +13,29 @@ public:
 	void update();
 
 	void drawLight();
-	void drawCtrl();
-
-	void load();
-	void save();
+	
 
 	//----------------------
-	//Cue	
+	//Light
+
+	//----------------------
+	//Cue
+public:
+	void drawCue();
+
 	void toCue(int cueNo);
 	void nextCue();
 	void prevCue();
 
-	void addCue();
-	void delCue();
-
-
-private:
-	void initGUI();
+	void load();
+	void save();
 
 private:
 	bool _isSetup;
-	int _cueNo;
-	vector<milightCtrl> _lightList;
-	vector<milightCueTable> _cueTable;
 
-	//GUI
-	ofxGuiGroup _lightGUI;
-	ofxColorSlider _gCLightColor;
-	ofxFloatSlider _gSWarmWhite, _gSColdWhite;
-	ofxFloatSlider _gSCueDuration, _gSLoopDuration;
-	
-	ofxButton _gBAddCue, _gBDelCue, _gBUpdate, _gBHasLoop;
-	
+	vector<milightCtrl> _lightList;
+
+
+
+
 };
