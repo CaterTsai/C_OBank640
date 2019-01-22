@@ -10,7 +10,7 @@ public:
 	{}
 
 	void setup(int startAddr);
-	void update();
+	void update(float delta);
 	void setColor(ofColor color);
 	ofColor& getColor();
 private:

@@ -179,7 +179,7 @@
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSlider.cpp" />
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.cpp" />
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp" />
-    <ClCompile Include="..\..\myApps\testDMX\src\HD512\ofxCTHD512.cpp" />
+    <ClCompile Include="src\HD512\ofxCTHD512.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\milightCtrl.cpp" />
     <ClCompile Include="src\milightCueTable.cpp" />
@@ -269,12 +269,13 @@
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSlider.h" />
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.h" />
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h" />
-    <ClInclude Include="..\..\myApps\testDMX\src\HD512\HD512DLL.h" />
-    <ClInclude Include="..\..\myApps\testDMX\src\HD512\ofxCTHD512.h" />
+    <ClInclude Include="src\HD512\HD512DLL.h" />
+    <ClInclude Include="src\HD512\ofxCTHD512.h" />
     <ClInclude Include="src\milightCtrl.h" />
     <ClInclude Include="src\milightCue.h" />
     <ClInclude Include="src\milightCueTable.h" />
     <ClInclude Include="src\milightMgr.h" />
+    <ClInclude Include="src\milightParameter.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\addons\ofxAnimatable\src\ofxAnimatable.h" />
     <ClInclude Include="..\..\..\addons\ofxAnimatable\src\ofxAnimatableFloat.h" />

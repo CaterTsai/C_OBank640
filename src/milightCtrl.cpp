@@ -8,7 +8,7 @@ void milightCtrl::setup(int startAddr)
 	_color.set(0);
 }
 
-void milightCtrl::update()
+void milightCtrl::update(float delta)
 {
 	ofxCTHD512::GetInstance()->set(_startAddr, _color.r);
 	ofxCTHD512::GetInstance()->set(_startAddr + 1, _color.g);

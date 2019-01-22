@@ -223,9 +223,6 @@
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp">
       <Filter>addons\ofxXmlSettings\libs</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\myApps\testDMX\src\HD512\ofxCTHD512.cpp">
-      <Filter>src\HD512</Filter>
-    </ClCompile>
     <ClCompile Include="src\milightCtrl.cpp">
       <Filter>src\millight</Filter>
     </ClCompile>
@@ -261,6 +258,9 @@
     </ClCompile>
     <ClCompile Include="src\ofxPanelEx.cpp">
       <Filter>src\millight</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HD512\ofxCTHD512.cpp">
+      <Filter>src\HD512</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -581,12 +581,6 @@
     <ClInclude Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.h">
       <Filter>addons\ofxXmlSettings\libs</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\myApps\testDMX\src\HD512\HD512DLL.h">
-      <Filter>src\HD512</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\myApps\testDMX\src\HD512\ofxCTHD512.h">
-      <Filter>src\HD512</Filter>
-    </ClInclude>
     <ClInclude Include="src\milightCtrl.h">
       <Filter>src\millight</Filter>
     </ClInclude>
@@ -628,6 +622,15 @@
     </ClInclude>
     <ClInclude Include="src\ofxPanelEx.h">
       <Filter>src\millight</Filter>
+    </ClInclude>
+    <ClInclude Include="src\milightParameter.h">
+      <Filter>src\millight</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HD512\HD512DLL.h">
+      <Filter>src\HD512</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HD512\ofxCTHD512.h">
+      <Filter>src\HD512</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

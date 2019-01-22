@@ -3,9 +3,9 @@
 #include "ofxXmlSettings.h"
 #include "ofxGui.h"
 #include "ofxPanelEx.h"
+#include "milightParameter.h"
 #include "milightCue.h"
 
-const int cLightNum = 6;
 typedef array<milightCue, cLightNum> milightCueList;
 
 class milightCueTable {
@@ -14,6 +14,10 @@ public:
 	void init(string path);
 	void drawCue(int x, int y);
 	void drawGUI(int x, int y);
+
+	inline int getCueNum() {
+		return _cueTable.size();
+	}
 
 private:
 	void loadCue();
@@ -27,7 +31,6 @@ public:
 	void onBtnPrevCue();
 	void onBtnNextLight();
 	void onBtnPrevLight();
-	void onSave();
 
 private:
 	void initGUI();

@@ -1,8 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "milightCtrl.h"
-#include "milightCueTable.h"
+#include "milightMgr.h"
 
 class ofApp : public ofBaseApp {
 
@@ -14,5 +13,5 @@ public:
 	void keyPressed(int key);
 
 private:
-	milightCueTable table;
+	
 };
