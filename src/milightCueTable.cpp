@@ -39,6 +39,11 @@ void milightCueTable::drawGUI(int x, int y)
 	ofPopMatrix();
 }
 
+milightCueList& milightCueTable::getCue(int i)
+{
+	return _cueTable[i];
+}
+
 void milightCueTable::loadCue()
 {
 	ofxXmlSettings xml;
@@ -194,13 +199,13 @@ void milightCueTable::initGUI()
 
 	_lightGUI.add(_gSState.set("Light State", 0, 0, 3));
 	_lightGUI.add(_gLLightState.set("State Name", cTypeName[0]));
-	_lightGUI.add(_gSCueDuration.set("Cue In¡@Duration", 0, 0, 255));
+	_lightGUI.add(_gSCueDuration.set("Cue In¡@Duration", 0, 0, 20));
 
 	_lightGUI.add(_gCLightColor.set("RGB Color", ofColor(0, 0, 0)));
 	_lightGUI.add(_gSWarmWhite.set("Warm White", 0, 0, 255));
 	_lightGUI.add(_gSColdWhite.set("Cold White", 0, 0, 255));
 
-	_lightGUI.add(_gSLoopDuration.set("Loop Duration", 0, 0, 255));
+	_lightGUI.add(_gSLoopDuration.set("Loop Duration", 0, 0, 20));
 	_lightGUI.add(_gCLoopColor.set("Loop RGB Color", ofColor(0, 0, 0)));
 	_lightGUI.add(_gSLoopWarmWhite.set("Loop Warm White", 0, 0, 255));
 	_lightGUI.add(_gSLoopColdWhite.set("Loop Cold White", 0, 0, 255));

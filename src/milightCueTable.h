@@ -15,8 +15,15 @@ public:
 	void drawCue(int x, int y);
 	void drawGUI(int x, int y);
 
-	inline int getCueNum() {
+	milightCueList& getCue(int i);
+
+	inline const int getCueNum() {
 		return _cueTable.size();
+	}
+
+	inline const int getCueNo()
+	{
+		return _cueNo;
 	}
 
 private:

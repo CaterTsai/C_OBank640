@@ -10,7 +10,9 @@ public:
 	void update(float delta);
 	void set(int addr, unsigned char value);
 	void reset(unsigned char value);
-
+	bool isConnection() {
+		return _hasConnection;
+	}
 private:
 	void checkBuffer();
 

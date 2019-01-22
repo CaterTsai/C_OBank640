@@ -13,5 +13,7 @@ public:
 	void keyPressed(int key);
 
 private:
-	
+	float _mainTimer;
+
+	milightMgr _milight;
 };

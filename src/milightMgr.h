@@ -20,14 +20,15 @@ public:
 
 private:
 	bool _isSetup;
+	int _cueId;
 
 #pragma region Light Ctrl
 	//----------------------
 	//Light
-public:
+private:
 	void initLight();
 	void updateLight(float delta);
-	void drawLight(int x, int y);
+	void drawLight(int x, int y, int width, int height);
 private:
 	array<milightCtrl, cLightNum> _lightList;
 #pragma endregion
@@ -35,7 +36,7 @@ private:
 #pragma region Cue Table
 	//----------------------
 	//Cue Table
-public:
+private:
 	void initCueTable();
 	void drawCueTable(int x, int y);
 
