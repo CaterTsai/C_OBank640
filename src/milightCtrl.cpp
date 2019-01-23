@@ -24,6 +24,17 @@ void milightCtrl::setColor(ofColor color)
 	_animColor.setColor(color);
 }
 
+void milightCtrl::clear()
+{
+	_animColor.pause();
+	_animWarmWhite.pause();
+	_animColdWhite.pause();
+
+	_animColor.setColor(0);
+	_animWarmWhite.reset(0);
+	_animColdWhite.reset(0);
+}
+
 void milightCtrl::setCue(milightCue& cue)
 {
 	switch (cue._type)

@@ -19,6 +19,7 @@ public:
 	void setup(int startAddr);
 	void update(float delta);
 	void setColor(ofColor color);
+	void clear();
 
 	void setCue(milightCue& cue);
 

@@ -30,12 +30,12 @@ void ofApp::keyPressed(int key){
 	{
 	case 'q':
 	{
-		_milight.nextCue();
+		_milight.playCue();
 		break;
 	}
 	case 'w':
 	{
-		_milight.prevCue();
+		_milight.nextCue();
 		break;
 	}
 	}
