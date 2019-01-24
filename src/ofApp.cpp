@@ -38,5 +38,10 @@ void ofApp::keyPressed(int key){
 		_milight.nextCue();
 		break;
 	}
+	case 'e':
+	{
+		_milight.clearCue();
+		break;
+	}
 	}
 }

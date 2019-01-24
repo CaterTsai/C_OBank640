@@ -58,6 +58,10 @@ void milightMgr::playCue()
 }
 void milightMgr::clearCue()
 {
+	for (int i = 0; i < cLightNum; i++)
+	{
+		_lightList[i].clear();
+	}
 }
 #pragma endregion
 
@@ -120,7 +124,7 @@ void milightMgr::drawLight(int x, int y, int width, int height)
 #pragma region Cue Table
 void milightMgr::initCueTable()
 {
-	_cueTable.init("cue.xml");
+	_cueTable.init("_cue.xml");
 }
 
 void milightMgr::drawCueTable(int x, int y)

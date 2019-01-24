@@ -298,7 +298,7 @@ void milightCueTable::updateCue()
 		cue._color1 = _gCLightColor;
 		cue._coldWhiteVal1 = _gSColdWhite;
 		cue._warmWhiteVal1 = _gSWarmWhite;
-		cue._color2 = _gCLightColor;
+		cue._color2 = _gCLoopColor;;
 		cue._coldWhiteVal2 = _gSLoopColdWhite;
 		cue._warmWhiteVal2 = _gSLoopWarmWhite;
 		break;
