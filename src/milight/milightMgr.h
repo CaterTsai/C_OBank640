@@ -5,8 +5,6 @@
 #include "milightParameter.h"
 #include "milightCueTable.h"
 
-
-
 class milightMgr
 {
 public:
@@ -17,6 +15,9 @@ public:
 	void toCue(int cueNo);
 	void nextCue();
 	void prevCue();
+
+	void playCue();
+	void clearCue();
 
 private:
 	bool _isSetup;

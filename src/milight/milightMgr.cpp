@@ -17,7 +17,7 @@ void milightMgr::update(float delta)
 void milightMgr::draw(int x, int y)
 {
 	drawCueTable(x, y);
-	drawLight(x + 200, y, 500, 300);
+	drawLight(x + 300, y, 300, 100);
 }
 
 void milightMgr::toCue(int cueNo)
@@ -27,17 +27,13 @@ void milightMgr::toCue(int cueNo)
 		return;
 	}
 	_cueId = cueNo;
-	auto& cueList = _cueTable.getCue(_cueId);
-	for (int i = 0; i < cLightNum; i++)
-	{
-		_lightList[i].setCue(cueList[i]);
-	}
+	playCue();
 }
 
 void milightMgr::nextCue()
 {
 	_cueId = (_cueId + 1) % _cueTable.getCueNum();
-	toCue(_cueId);
+	playCue();
 }
 
 void milightMgr::prevCue()
@@ -49,7 +45,23 @@ void milightMgr::prevCue()
 	{
 		cueNo = _cueTable.getCueNo() - 1;
 	}
-	toCue(cueNo);
+	playCue();
+}
+
+void milightMgr::playCue()
+{
+	auto& cueList = _cueTable.getCue(_cueId);
+	for (int i = 0; i < cLightNum; i++)
+	{
+		_lightList[i].setCue(cueList[i]);
+	}
+}
+void milightMgr::clearCue()
+{
+	for (int i = 0; i < cLightNum; i++)
+	{
+		_lightList[i].clear();
+	}
 }
 #pragma endregion
 
@@ -112,7 +124,7 @@ void milightMgr::drawLight(int x, int y, int width, int height)
 #pragma region Cue Table
 void milightMgr::initCueTable()
 {
-	_cueTable.init("cue.xml");
+	_cueTable.init("_cue.xml");
 }
 
 void milightMgr::drawCueTable(int x, int y)

@@ -10,6 +10,7 @@ class milightCtrl
 public:
 	milightCtrl()
 		:_isSetup(false)
+		, _needSetLoop(false)
 	{
 		_animColor.setColor(ofColor(0));
 		_animWarmWhite.reset(0);
@@ -19,6 +20,7 @@ public:
 	void setup(int startAddr);
 	void update(float delta);
 	void setColor(ofColor color);
+	void clear();
 
 	void setCue(milightCue& cue);
 
@@ -26,6 +28,7 @@ public:
 	float getWarmWhite();
 	float getColdWhite();
 private:
+	void checkLoop();
 	void updateToDMX();
 
 private:
@@ -33,4 +36,9 @@ private:
 	int _startAddr;
 	ofxAnimatableOfColor _animColor;
 	ofxAnimatableFloat _animWarmWhite, _animColdWhite;
+
+	bool _needSetLoop;
+	float _loopDuration;
+	ofColor _loopColor;
+	float _loopWarmWhite, _loopColdWhite;
 };

@@ -47,12 +47,17 @@ void ofApp::keyPressed(int key){
 	{
 	case 'q':
 	{
-		_milight.nextCue();
+		_milight.playCue();
 		break;
 	}
 	case 'w':
 	{
-		_milight.prevCue();
+		_milight.nextCue();
+		break;
+	}
+	case 'e':
+	{
+		_milight.clearCue();
 		break;
 	}
 	case 'a':
