@@ -223,12 +223,6 @@
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp">
       <Filter>addons\ofxXmlSettings\libs</Filter>
     </ClCompile>
-    <ClCompile Include="src\milightCtrl.cpp">
-      <Filter>src\millight</Filter>
-    </ClCompile>
-    <ClCompile Include="src\milightMgr.cpp">
-      <Filter>src\millight</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxBaseGui.cpp">
       <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
@@ -253,14 +247,77 @@
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp">
       <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\milightCueTable.cpp">
+    <ClCompile Include="src\milight\milightCtrl.cpp">
       <Filter>src\millight</Filter>
     </ClCompile>
-    <ClCompile Include="src\ofxPanelEx.cpp">
+    <ClCompile Include="src\milight\milightCueTable.cpp">
+      <Filter>src\millight</Filter>
+    </ClCompile>
+    <ClCompile Include="src\milight\milightMgr.cpp">
+      <Filter>src\millight</Filter>
+    </ClCompile>
+    <ClCompile Include="src\milight\ofxPanelEx.cpp">
       <Filter>src\millight</Filter>
     </ClCompile>
     <ClCompile Include="src\HD512\ofxCTHD512.cpp">
       <Filter>src\HD512</Filter>
+    </ClCompile>
+    <ClCompile Include="src\singleton\ctrlMap.cpp">
+      <Filter>src\singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="src\singleton\displayMgr.cpp">
+      <Filter>src\singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="src\singleton\postFilter.cpp">
+      <Filter>src\singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="src\singleton\videoMgr.cpp">
+      <Filter>src\singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxMidi\src\ofxBaseMidi.cpp">
+      <Filter>addons\ofxMidi\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxMidi\src\ofxMidi.cpp">
+      <Filter>addons\ofxMidi\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxMidi\src\ofxMidiIn.cpp">
+      <Filter>addons\ofxMidi\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxMidi\src\ofxMidiMessage.cpp">
+      <Filter>addons\ofxMidi\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxMidi\src\ofxMidiOut.cpp">
+      <Filter>addons\ofxMidi\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxMidi\src\desktop\ofxRtMidiIn.cpp">
+      <Filter>addons\ofxMidi\src\desktop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxMidi\src\desktop\ofxRtMidiOut.cpp">
+      <Filter>addons\ofxMidi\src\desktop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxMidi\libs\rtmidi\RtMidi.cpp">
+      <Filter>addons\ofxMidi\libs\rtmidi</Filter>
+    </ClCompile>
+    <ClCompile Include="src\drawer\DTrain.cpp">
+      <Filter>src\drawer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DHalo.cpp">
+      <Filter>src\drawer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\drawer\DSphereParticle.cpp">
+      <Filter>src\drawer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\drawer\DClouds.cpp">
+      <Filter>src\drawer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\drawer\DBreeze.cpp">
+      <Filter>src\drawer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\drawer\DTail.cpp">
+      <Filter>src\drawer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DShootingStar.cpp">
+      <Filter>src\drawer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -321,14 +378,41 @@
     <Filter Include="src\HD512">
       <UniqueIdentifier>{b72d1bde-524d-4b60-bfb8-f8dbbe5a31da}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\millight">
-      <UniqueIdentifier>{9ed32e8c-dd8d-4afe-ad7f-209f42116e1a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="addons\ofxGui">
       <UniqueIdentifier>{4b571450-36a3-4975-a36d-92849962efbd}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxGui\src">
       <UniqueIdentifier>{2cf36b42-f2d5-4cfe-9e19-0c68361bd610}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\singleton">
+      <UniqueIdentifier>{fce14eab-ff54-4818-b9c0-37f5c7260989}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\drawer">
+      <UniqueIdentifier>{0486af5e-79dc-47c1-995d-956338afa198}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scence">
+      <UniqueIdentifier>{04561c3f-20e6-4065-868e-bee1781d9c93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\millight">
+      <UniqueIdentifier>{9ed32e8c-dd8d-4afe-ad7f-209f42116e1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scence\sceneList">
+      <UniqueIdentifier>{f5e4e498-4d8c-44de-b338-dd9a67cfbaec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxMidi">
+      <UniqueIdentifier>{d9203ed6-a40c-4778-8232-c331c8c194e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxMidi\src">
+      <UniqueIdentifier>{00e3474c-8cf2-4893-a00a-cae7cb1add43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxMidi\src\desktop">
+      <UniqueIdentifier>{e04e37a3-73a6-4af6-8306-aa1e9a27f69a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxMidi\libs">
+      <UniqueIdentifier>{2b1845be-c532-4260-8ff3-4ee1a3c9b821}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxMidi\libs\rtmidi">
+      <UniqueIdentifier>{f8ab011f-43ce-4d1c-9223-eff6bbafbe32}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -581,15 +665,6 @@
     <ClInclude Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.h">
       <Filter>addons\ofxXmlSettings\libs</Filter>
     </ClInclude>
-    <ClInclude Include="src\milightCtrl.h">
-      <Filter>src\millight</Filter>
-    </ClInclude>
-    <ClInclude Include="src\milightMgr.h">
-      <Filter>src\millight</Filter>
-    </ClInclude>
-    <ClInclude Include="src\milightCue.h">
-      <Filter>src\millight</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxBaseGui.h">
       <Filter>addons\ofxGui\src</Filter>
     </ClInclude>
@@ -617,20 +692,197 @@
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h">
       <Filter>addons\ofxGui\src</Filter>
     </ClInclude>
-    <ClInclude Include="src\milightCueTable.h">
+    <ClInclude Include="src\milight\milightCtrl.h">
       <Filter>src\millight</Filter>
     </ClInclude>
-    <ClInclude Include="src\ofxPanelEx.h">
+    <ClInclude Include="src\milight\milightCue.h">
       <Filter>src\millight</Filter>
     </ClInclude>
-    <ClInclude Include="src\milightParameter.h">
+    <ClInclude Include="src\milight\milightCueTable.h">
       <Filter>src\millight</Filter>
+    </ClInclude>
+    <ClInclude Include="src\milight\milightMgr.h">
+      <Filter>src\millight</Filter>
+    </ClInclude>
+    <ClInclude Include="src\milight\milightParameter.h">
+      <Filter>src\millight</Filter>
+    </ClInclude>
+    <ClInclude Include="src\milight\ofxPanelEx.h">
+      <Filter>src\millight</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HD512\ofxCTHD512.h">
+      <Filter>src\HD512</Filter>
     </ClInclude>
     <ClInclude Include="src\HD512\HD512DLL.h">
       <Filter>src\HD512</Filter>
     </ClInclude>
-    <ClInclude Include="src\HD512\ofxCTHD512.h">
-      <Filter>src\HD512</Filter>
+    <ClInclude Include="src\singleton\ctrlMap.h">
+      <Filter>src\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="src\singleton\displayMgr.h">
+      <Filter>src\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="src\singleton\postFilter.h">
+      <Filter>src\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="src\singleton\videoMgr.h">
+      <Filter>src\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="src\drawer\DBase.h">
+      <Filter>src\drawer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\drawer\drawParameter.h">
+      <Filter>src\drawer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\drawer\DType.h">
+      <Filter>src\drawer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SBase.h">
+      <Filter>src\scence</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\sceneMgr.h">
+      <Filter>src\scence</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SType.h">
+      <Filter>src\scence</Filter>
+    </ClInclude>
+    <ClInclude Include="src\constParameter.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SFrance01.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SFrance02.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SFrance03.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SFrance04.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SFrance05.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SFrance06.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SFrance07.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SIdle01.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SIdle02.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SItaly01.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SItaly02.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SItaly03.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SItaly04.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SItaly05.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SItaly06.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SItaly07.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SItaly08.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SItaly09.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SItaly10.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SItaly11.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SMC01.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SMC02.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SMC03.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SMC04.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SMC05.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SMC06.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SMC07.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\ofxBaseMidi.h">
+      <Filter>addons\ofxMidi\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\ofxMidi.h">
+      <Filter>addons\ofxMidi\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\ofxMidiConstants.h">
+      <Filter>addons\ofxMidi\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\ofxMidiIn.h">
+      <Filter>addons\ofxMidi\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\ofxMidiMessage.h">
+      <Filter>addons\ofxMidi\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\ofxMidiOut.h">
+      <Filter>addons\ofxMidi\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\ofxMidiTypes.h">
+      <Filter>addons\ofxMidi\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\desktop\ofxRtMidiIn.h">
+      <Filter>addons\ofxMidi\src\desktop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\desktop\ofxRtMidiOut.h">
+      <Filter>addons\ofxMidi\src\desktop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxMidi\libs\rtmidi\RtMidi.h">
+      <Filter>addons\ofxMidi\libs\rtmidi</Filter>
+    </ClInclude>
+    <ClInclude Include="src\drawer\DTrain.h">
+      <Filter>src\drawer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\drawer\drawer.h">
+      <Filter>src\drawer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DHalo.h">
+      <Filter>src\drawer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\drawer\DSphereParticle.h">
+      <Filter>src\drawer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\drawer\DClouds.h">
+      <Filter>src\drawer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\drawer\DBreeze.h">
+      <Filter>src\drawer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\drawer\DTail.h">
+      <Filter>src\drawer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\drawer\DShootingStar.h">
+      <Filter>src\drawer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

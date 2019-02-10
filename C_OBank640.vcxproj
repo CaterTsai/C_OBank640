@@ -95,7 +95,7 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofxAnimatable\src;..\..\..\addons\ofxDSHapVideoPlayer\libs;..\..\..\addons\ofxDSHapVideoPlayer\libs\External;..\..\..\addons\ofxDSHapVideoPlayer\libs\External\DirectShow;..\..\..\addons\ofxDSHapVideoPlayer\libs\External\DirectShow\BaseClasses;..\..\..\addons\ofxDSHapVideoPlayer\libs\External\snappy;..\..\..\addons\ofxDSHapVideoPlayer\src;..\..\..\addons\ofxLayerMask\src;..\..\..\addons\ofxLayerMask\src\shader;..\..\..\addons\ofxPostProcessing\src;..\..\..\addons\ofxXmlSettings\libs;..\..\..\addons\ofxXmlSettings\src;..\..\..\addons\ofxGui\src;.\src\HD512</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofxAnimatable\src;..\..\..\addons\ofxDSHapVideoPlayer\libs;..\..\..\addons\ofxDSHapVideoPlayer\libs\External;..\..\..\addons\ofxDSHapVideoPlayer\libs\External\DirectShow;..\..\..\addons\ofxDSHapVideoPlayer\libs\External\DirectShow\BaseClasses;..\..\..\addons\ofxDSHapVideoPlayer\libs\External\snappy;..\..\..\addons\ofxDSHapVideoPlayer\src;..\..\..\addons\ofxLayerMask\src;..\..\..\addons\ofxLayerMask\src\shader;..\..\..\addons\ofxPostProcessing\src;..\..\..\addons\ofxXmlSettings\libs;..\..\..\addons\ofxXmlSettings\src;..\..\..\addons\ofxGui\src;..\..\..\addons\ofxMidi\src;..\..\..\addons\ofxMidi\src\desktop;..\..\..\addons\ofxMidi\libs\rtmidi;.\src\HD512;.\src\milight;.\src\drawer;.\src\scene;.\src\singleton</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -133,7 +133,7 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofxAnimatable\src;..\..\..\addons\ofxDSHapVideoPlayer\libs;..\..\..\addons\ofxDSHapVideoPlayer\libs\External;..\..\..\addons\ofxDSHapVideoPlayer\libs\External\DirectShow;..\..\..\addons\ofxDSHapVideoPlayer\libs\External\DirectShow\BaseClasses;..\..\..\addons\ofxDSHapVideoPlayer\libs\External\snappy;..\..\..\addons\ofxDSHapVideoPlayer\src;..\..\..\addons\ofxLayerMask\src;..\..\..\addons\ofxLayerMask\src\shader;..\..\..\addons\ofxPostProcessing\src;..\..\..\addons\ofxXmlSettings\libs;..\..\..\addons\ofxXmlSettings\src;..\..\..\addons\ofxGui\src;.\src\HD512</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofxAnimatable\src;..\..\..\addons\ofxDSHapVideoPlayer\libs;..\..\..\addons\ofxDSHapVideoPlayer\libs\External;..\..\..\addons\ofxDSHapVideoPlayer\libs\External\DirectShow;..\..\..\addons\ofxDSHapVideoPlayer\libs\External\DirectShow\BaseClasses;..\..\..\addons\ofxDSHapVideoPlayer\libs\External\snappy;..\..\..\addons\ofxDSHapVideoPlayer\src;..\..\..\addons\ofxLayerMask\src;..\..\..\addons\ofxLayerMask\src\shader;..\..\..\addons\ofxPostProcessing\src;..\..\..\addons\ofxXmlSettings\libs;..\..\..\addons\ofxXmlSettings\src;..\..\..\addons\ofxGui\src;..\..\..\addons\ofxMidi\src;..\..\..\addons\ofxMidi\src\desktop;..\..\..\addons\ofxMidi\libs\rtmidi;.\src\HD512;.\src\milight;.\src\drawer;.\src\scene;.\src\singleton</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -179,11 +179,27 @@
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSlider.cpp" />
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.cpp" />
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxMidi\libs\rtmidi\RtMidi.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxMidi\src\desktop\ofxRtMidiIn.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxMidi\src\desktop\ofxRtMidiOut.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxMidi\src\ofxBaseMidi.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxMidi\src\ofxMidi.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxMidi\src\ofxMidiIn.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxMidi\src\ofxMidiMessage.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxMidi\src\ofxMidiOut.cpp" />
+    <ClCompile Include="src\DHalo.cpp" />
+    <ClCompile Include="src\drawer\DBreeze.cpp" />
+    <ClCompile Include="src\drawer\DClouds.cpp" />
+    <ClCompile Include="src\drawer\DSphereParticle.cpp" />
+    <ClCompile Include="src\drawer\DTail.cpp" />
+    <ClCompile Include="src\drawer\DTrain.cpp" />
+    <ClCompile Include="src\DShootingStar.cpp" />
     <ClCompile Include="src\HD512\ofxCTHD512.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\milightCtrl.cpp" />
-    <ClCompile Include="src\milightCueTable.cpp" />
-    <ClCompile Include="src\milightMgr.cpp" />
+    <ClCompile Include="src\milight\milightCtrl.cpp" />
+    <ClCompile Include="src\milight\milightCueTable.cpp" />
+    <ClCompile Include="src\milight\milightMgr.cpp" />
+    <ClCompile Include="src\milight\ofxPanelEx.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="..\..\..\addons\ofxAnimatable\src\ofxAnimatable.cpp" />
     <ClCompile Include="..\..\..\addons\ofxAnimatable\src\ofxAnimatableFloat.cpp" />
@@ -257,7 +273,10 @@
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.cpp" />
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
-    <ClCompile Include="src\ofxPanelEx.cpp" />
+    <ClCompile Include="src\singleton\ctrlMap.cpp" />
+    <ClCompile Include="src\singleton\displayMgr.cpp" />
+    <ClCompile Include="src\singleton\postFilter.cpp" />
+    <ClCompile Include="src\singleton\videoMgr.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxBaseGui.h" />
@@ -269,13 +288,36 @@
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSlider.h" />
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.h" />
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h" />
+    <ClInclude Include="..\..\..\addons\ofxMidi\libs\rtmidi\RtMidi.h" />
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\desktop\ofxRtMidiIn.h" />
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\desktop\ofxRtMidiOut.h" />
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\ofxBaseMidi.h" />
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\ofxMidi.h" />
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\ofxMidiConstants.h" />
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\ofxMidiIn.h" />
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\ofxMidiMessage.h" />
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\ofxMidiOut.h" />
+    <ClInclude Include="..\..\..\addons\ofxMidi\src\ofxMidiTypes.h" />
+    <ClInclude Include="src\constParameter.h" />
+    <ClInclude Include="src\DHalo.h" />
+    <ClInclude Include="src\drawer\DBase.h" />
+    <ClInclude Include="src\drawer\DBreeze.h" />
+    <ClInclude Include="src\drawer\DClouds.h" />
+    <ClInclude Include="src\drawer\drawer.h" />
+    <ClInclude Include="src\drawer\drawParameter.h" />
+    <ClInclude Include="src\drawer\DShootingStar.h" />
+    <ClInclude Include="src\drawer\DSphereParticle.h" />
+    <ClInclude Include="src\drawer\DTail.h" />
+    <ClInclude Include="src\drawer\DTrain.h" />
+    <ClInclude Include="src\drawer\DType.h" />
     <ClInclude Include="src\HD512\HD512DLL.h" />
     <ClInclude Include="src\HD512\ofxCTHD512.h" />
-    <ClInclude Include="src\milightCtrl.h" />
-    <ClInclude Include="src\milightCue.h" />
-    <ClInclude Include="src\milightCueTable.h" />
-    <ClInclude Include="src\milightMgr.h" />
-    <ClInclude Include="src\milightParameter.h" />
+    <ClInclude Include="src\milight\milightCtrl.h" />
+    <ClInclude Include="src\milight\milightCue.h" />
+    <ClInclude Include="src\milight\milightCueTable.h" />
+    <ClInclude Include="src\milight\milightMgr.h" />
+    <ClInclude Include="src\milight\milightParameter.h" />
+    <ClInclude Include="src\milight\ofxPanelEx.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\addons\ofxAnimatable\src\ofxAnimatable.h" />
     <ClInclude Include="..\..\..\addons\ofxAnimatable\src\ofxAnimatableFloat.h" />
@@ -359,7 +401,40 @@
     <ClInclude Include="..\..\..\addons\ofxPostProcessing\src\ZoomBlurPass.h" />
     <ClInclude Include="..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
     <ClInclude Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.h" />
-    <ClInclude Include="src\ofxPanelEx.h" />
+    <ClInclude Include="src\scene\SBase.h" />
+    <ClInclude Include="src\scene\sceneMgr.h" />
+    <ClInclude Include="src\scene\SFrance01.h" />
+    <ClInclude Include="src\scene\SFrance02.h" />
+    <ClInclude Include="src\scene\SFrance03.h" />
+    <ClInclude Include="src\scene\SFrance04.h" />
+    <ClInclude Include="src\scene\SFrance05.h" />
+    <ClInclude Include="src\scene\SFrance06.h" />
+    <ClInclude Include="src\scene\SFrance07.h" />
+    <ClInclude Include="src\scene\SIdle01.h" />
+    <ClInclude Include="src\scene\SIdle02.h" />
+    <ClInclude Include="src\scene\SItaly01.h" />
+    <ClInclude Include="src\scene\SItaly02.h" />
+    <ClInclude Include="src\scene\SItaly03.h" />
+    <ClInclude Include="src\scene\SItaly04.h" />
+    <ClInclude Include="src\scene\SItaly05.h" />
+    <ClInclude Include="src\scene\SItaly06.h" />
+    <ClInclude Include="src\scene\SItaly07.h" />
+    <ClInclude Include="src\scene\SItaly08.h" />
+    <ClInclude Include="src\scene\SItaly09.h" />
+    <ClInclude Include="src\scene\SItaly10.h" />
+    <ClInclude Include="src\scene\SItaly11.h" />
+    <ClInclude Include="src\scene\SMC01.h" />
+    <ClInclude Include="src\scene\SMC02.h" />
+    <ClInclude Include="src\scene\SMC03.h" />
+    <ClInclude Include="src\scene\SMC04.h" />
+    <ClInclude Include="src\scene\SMC05.h" />
+    <ClInclude Include="src\scene\SMC06.h" />
+    <ClInclude Include="src\scene\SMC07.h" />
+    <ClInclude Include="src\scene\SType.h" />
+    <ClInclude Include="src\singleton\ctrlMap.h" />
+    <ClInclude Include="src\singleton\displayMgr.h" />
+    <ClInclude Include="src\singleton\postFilter.h" />
+    <ClInclude Include="src\singleton\videoMgr.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
