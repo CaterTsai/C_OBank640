@@ -3,44 +3,50 @@
 //-------------------------------------
 void postFilter::init(int w, int h, bool arb)
 {
-	_postMgr.init(w, h, arb);
+	for(auto& iter : _postMgr)
+	{
+		iter.init(w, h, arb);
 
-	_postMgr.createPass<BloomPass>()->setEnabled(false);
-	_postMgr.createPass<BloomPass>()->setEnabled(false);
-	_postMgr.createPass<NoiseWarpPass>()->setEnabled(false);
-	_postMgr.createPass<ZoomBlurPass>()->setEnabled(false);
-	_postMgr.createPass<KaleidoscopePass>()->setEnabled(false);
-	_postMgr.createPass<EdgePass>()->setEnabled(false);
-	_postMgr.createPass<PixelatePass>()->setEnabled(false);
-	_postMgr.createPass<RGBShiftPass>()->setEnabled(false);
-	_postMgr.createPass<ToonPass>()->setEnabled(false);
+		iter.createPass<BloomPass>()->setEnabled(false);
+		iter.createPass<BloomPass>()->setEnabled(false);
+		iter.createPass<NoiseWarpPass>()->setEnabled(false);
+		iter.createPass<ZoomBlurPass>()->setEnabled(false);
+		iter.createPass<KaleidoscopePass>()->setEnabled(false);
+		iter.createPass<EdgePass>()->setEnabled(false);
+		iter.createPass<PixelatePass>()->setEnabled(false);
+		iter.createPass<RGBShiftPass>()->setEnabled(false);
+		iter.createPass<ToonPass>()->setEnabled(false);
 
-	_postMgr.setFlip(false);
+		iter.setFlip(false);
+	}
+	
 
 }
 
 //-------------------------------------
-void postFilter::filterEnable(ePostFilterType type)
+void postFilter::filterEnable(ePostFilterType type, eDisplayLayer layer)
 {
-	auto isEnable = !_postMgr[(int)type]->getEnabled();
-	_postMgr[(int)type]->setEnabled(isEnable);
+	auto isEnable = !_postMgr[layer][(int)type]->getEnabled();
+	_postMgr[layer][(int)type]->setEnabled(isEnable);
 	
 }
 
 //-------------------------------------
-void postFilter::filterEnable(ePostFilterType type, bool isEnable)
+void postFilter::filterEnable(ePostFilterType type, eDisplayLayer layer, bool isEnable)
 {
-	_postMgr[(int)type]->setEnabled(isEnable);
+	_postMgr[layer][(int)type]->setEnabled(isEnable);
 	
 }
 
 //-------------------------------------
 void postFilter::disableAll()
 {
-	for (int i = 0; i < _postMgr.size(); i++)
+	for (auto& iter : _postMgr)
 	{
-		
-		_postMgr[i]->disable();
+		for (int i = 0; i < iter.size(); i++)
+		{
+			iter[i]->disable();
+		}
 	}
 }
 

@@ -20,14 +20,14 @@ class postFilter
 {
 public:
 	void init(int w, int h, bool arb);
-	void filterEnable(ePostFilterType type);
-	void filterEnable(ePostFilterType type, bool isEnable);
+	void filterEnable(ePostFilterType type, eDisplayLayer layer);
+	void filterEnable(ePostFilterType type, eDisplayLayer layer, bool isEnable);
 	void disableAll();
 private:
 	bool _isInit;
 
 public:
-	ofxPostProcessing _postMgr;
+	array<ofxPostProcessing, eDisplayLayerNum> _postMgr;
 //-------------------
 //Singleton
 //-------------------

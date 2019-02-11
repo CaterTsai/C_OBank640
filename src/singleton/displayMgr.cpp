@@ -1,15 +1,124 @@
 #include "displayMgr.h"
 #include "ofxXmlSettings.h"
 
-#pragma region Basic
 //------------------------------
-displayMgr::displayMgr()
-	:_isSetup(false)
-	,_ctrlID(-1)
+
+void displayMgr::beginCtrl(bool needClear)
 {
+	if (_isCtrlBegin)
+	{
+		ofLog(OF_LOG_WARNING, "[displayMgr::beginCtrl]Need ctrl end");
+		return;
+	}
+
+	_isCtrlBegin = true;
+	_ctrlCanvas.begin();
+	if (needClear)
+	{
+		ofClear(0);
+	}
+	
 }
 
-#pragma endregion
+void displayMgr::endCtrl()
+{
+	if (!_isCtrlBegin)
+	{
+		ofLog(OF_LOG_WARNING, "[displayMgr::endCtrl]Need ctrl begin");
+		return;
+	}
+
+	_ctrlCanvas.end();
+	_isCtrlBegin = false;
+
+}
+
+void displayMgr::beginDisplay(eDisplayLayer layer, bool needClear)
+{
+	if (_drawLayer != eDisplayUnknow)
+	{
+		ofLog(OF_LOG_WARNING, "[displayMgr::beginDisplay]Need End");
+		return;
+	}
+
+	_drawLayer = layer;
+	_displayCanvas[_drawLayer].begin();
+	if (needClear)
+	{
+		ofClear(0);
+	}
+
+}
+
+void displayMgr::endDisplay()
+{
+	if (_drawLayer == eDisplayUnknow)
+	{
+		ofLog(OF_LOG_WARNING, "[displayMgr::endDisplay]Need Begin");
+		return;
+	}
+	_displayCanvas[_drawLayer].end();
+	_drawLayer = eDisplayUnknow;
+}
+
+void displayMgr::drawCtrl(int x, int y)
+{
+	ofPushStyle();
+	ofSetColor(255);
+	_ctrlCanvas.draw(x, y);
+	ofPopStyle();
+}
+
+void displayMgr::drawDisplay(int x, int y)
+{
+	ofPushStyle();
+	if (_isSingleColor)
+	{
+		ofBackground(_displayBGColorFrom);
+	}
+	else
+	{
+		ofBackgroundGradient(_displayBGColorFrom, _displayBGColorTo, _gradientMode);
+	}
+
+	ofSetColor(255);
+	for (auto& iter : _displayCanvas)
+	{
+		iter.draw(x, y);
+	}
+
+	ofSetColor(0, _displayCoverAlpha);
+	ofFill();
+	ofDrawRectangle(x, y, cDisplayCanvasWidth, cDisplayCanvasHeight);
+
+	ofPopStyle();
+}
+
+void displayMgr::setCoverAlpha(int alpha)
+{
+	_displayCoverAlpha = MAX(MIN(alpha, 255), 0);
+}
+
+void displayMgr::setBGMode(bool isSingleColor, ofGradientMode gMode)
+{
+	_isSingleColor = isSingleColor;
+	if (!_isSingleColor)
+	{
+		_gradientMode = gMode;
+	}
+}
+
+void displayMgr::setBGColor(ofColor c)
+{
+	_displayBGColorFrom.set(c);
+}
+
+void displayMgr::setBGColor(ofColor from, ofColor to)
+{
+	_displayBGColorFrom.set(from);
+	_displayBGColorTo.set(to);
+}
+
 
 #pragma region Singleton
 //--------------------------------------------------------------
@@ -32,7 +141,4 @@ void displayMgr::Destroy()
 	}
 }
 #pragma endregion
-
-
-
 

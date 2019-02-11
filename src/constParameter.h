@@ -5,6 +5,13 @@
 const int cWindowWidth = 1920;
 const int cWindowHeight = 1080;
 
+enum eDisplayLayer : int{
+	eDisplayFront = 0,
+	eDisplayBack,
+	eDisplayLayerNum,
+	eDisplayUnknow
+};
+
 //--------------
 //Video Mgr
 enum eVideoType : int
