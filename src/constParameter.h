@@ -31,6 +31,8 @@ enum eVideoType : int
 	, eVideoTrainView12
 	, eVideoTrainView13
 	, eVideoTrainView14
+
+
 	, eVideoNum
 };
 

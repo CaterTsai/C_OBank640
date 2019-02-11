@@ -301,9 +301,6 @@
     <ClCompile Include="src\drawer\DTrain.cpp">
       <Filter>src\drawer</Filter>
     </ClCompile>
-    <ClCompile Include="src\DHalo.cpp">
-      <Filter>src\drawer</Filter>
-    </ClCompile>
     <ClCompile Include="src\drawer\DSphereParticle.cpp">
       <Filter>src\drawer</Filter>
     </ClCompile>
@@ -316,8 +313,17 @@
     <ClCompile Include="src\drawer\DTail.cpp">
       <Filter>src\drawer</Filter>
     </ClCompile>
-    <ClCompile Include="src\DShootingStar.cpp">
+    <ClCompile Include="src\drawer\DHalo.cpp">
       <Filter>src\drawer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\drawer\DShootingStar.cpp">
+      <Filter>src\drawer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofDisplayerApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofViewerApp.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -794,42 +800,6 @@
     <ClInclude Include="src\scene\SItaly06.h">
       <Filter>src\scence\sceneList</Filter>
     </ClInclude>
-    <ClInclude Include="src\scene\SItaly07.h">
-      <Filter>src\scence\sceneList</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\SItaly08.h">
-      <Filter>src\scence\sceneList</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\SItaly09.h">
-      <Filter>src\scence\sceneList</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\SItaly10.h">
-      <Filter>src\scence\sceneList</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\SItaly11.h">
-      <Filter>src\scence\sceneList</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\SMC01.h">
-      <Filter>src\scence\sceneList</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\SMC02.h">
-      <Filter>src\scence\sceneList</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\SMC03.h">
-      <Filter>src\scence\sceneList</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\SMC04.h">
-      <Filter>src\scence\sceneList</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\SMC05.h">
-      <Filter>src\scence\sceneList</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\SMC06.h">
-      <Filter>src\scence\sceneList</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\SMC07.h">
-      <Filter>src\scence\sceneList</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxMidi\src\ofxBaseMidi.h">
       <Filter>addons\ofxMidi\src</Filter>
     </ClInclude>
@@ -866,9 +836,6 @@
     <ClInclude Include="src\drawer\drawer.h">
       <Filter>src\drawer</Filter>
     </ClInclude>
-    <ClInclude Include="src\DHalo.h">
-      <Filter>src\drawer</Filter>
-    </ClInclude>
     <ClInclude Include="src\drawer\DSphereParticle.h">
       <Filter>src\drawer</Filter>
     </ClInclude>
@@ -883,6 +850,18 @@
     </ClInclude>
     <ClInclude Include="src\drawer\DShootingStar.h">
       <Filter>src\drawer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SEnding.h">
+      <Filter>src\scence\sceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="src\drawer\DHalo.h">
+      <Filter>src\drawer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofDisplayerApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofViewerApp.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

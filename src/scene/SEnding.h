@@ -2,11 +2,11 @@
 
 #include "SBase.h"
 
-class SMC04 : public SBase {
+class SEnding : public SBase {
 
 public:
-	SMC04()
-		:SBase(eSMC04)
+	SEnding()
+		:SBase(eSEnding)
 	{}
 
 	void update(float delta) override {}
@@ -25,7 +25,7 @@ public:
 	{
 	};
 	void control(eCtrlType ctrl, int value = cMidiButtonPress) override {};
-	string getSceneName() { return "SMC04"; }
+	string getSceneName() { return "SEnding"; }
 
 private:
 

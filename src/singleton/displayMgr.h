@@ -19,6 +19,7 @@ public:
 
 	void drawCtrl(int x, int y);
 	void drawDisplay(int x, int y);
+	void clearAllDisplay();
 
 	void setCoverAlpha(int alpha);
 	void setBGMode(bool isSingleColor, ofGradientMode gMode = OF_GRADIENT_LINEAR);

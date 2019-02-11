@@ -94,6 +94,16 @@ void displayMgr::drawDisplay(int x, int y)
 	ofPopStyle();
 }
 
+void displayMgr::clearAllDisplay()
+{
+	for (auto& iter : _displayCanvas)
+	{
+		iter.begin();
+		ofClear(0);
+		iter.end();
+	}
+}
+
 void displayMgr::setCoverAlpha(int alpha)
 {
 	_displayCoverAlpha = MAX(MIN(alpha, 255), 0);

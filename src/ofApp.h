@@ -24,8 +24,4 @@ public:
 	void initVideoMgr();
 
 #pragma endregion
-
-	DShootingStar _dTest;
-
-	ofImage _bg;
 };
