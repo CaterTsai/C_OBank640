@@ -1,6 +1,7 @@
 #pragma once
 
 #include "SBase.h"
+#include "DClouds.h"
 
 class SFrance01 : public SBase {
 
@@ -9,8 +10,15 @@ public:
 		:SBase(eSFrance01)
 	{}
 
-	void update(float delta) override {}
-	void draw() override {
+	void updateFunc(float delta) override 
+	{
+		_dCloud.update(delta);
+	}
+	void drawFunc() override {
+		displayMgr::GetInstance()->beginDisplay(eDisplayFront);
+		ofSetColor(255);
+		_dCloud.draw();
+		displayMgr::GetInstance()->endDisplay();
 	};
 	void drawMsg(ofVec2f pos) override 
 	{
@@ -18,15 +26,20 @@ public:
 		ss << getSceneName();
 		ofDrawBitmapStringHighlight(ss.str(), pos);
 	};
-	void start() override 
+	void startFunc() override 
 	{
+		displayMgr::GetInstance()->setBGMode(false, OF_GRADIENT_LINEAR);
+		displayMgr::GetInstance()->setBGColor(ofColor(24, 168, 235), ofColor(194, 234, 255));
+		displayMgr::GetInstance()->clearAllDisplay();
+		_dCloud.start();
 	};
-	void stop() override 
+	void stopFunc() override 
 	{
+		_dCloud.stop();
 	};
 	void control(eCtrlType ctrl, int value = cMidiButtonPress) override {};
 	string getSceneName() { return "SFrance01"; }
 
 private:
-
+	DClouds _dCloud;
 };

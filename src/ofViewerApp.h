@@ -22,6 +22,10 @@ public:
 	void draw();
 	void keyPressed(int key);
 	void control(eCtrlType ctrl, int value = cMidiButtonPress);
+
+private:
+	void drawPreview();
+
 private:
 	bool _showMsg;
 	float _mainTimer;
@@ -29,6 +33,7 @@ private:
 	//Scence
 private:
 	void initScene();
+	
 private:
 	bool _isStart;
 	vector<ofPtr<SBase>> _scenceMgr;

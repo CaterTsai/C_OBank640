@@ -2,7 +2,6 @@
 #include "ofxXmlSettings.h"
 
 //------------------------------
-
 void displayMgr::beginCtrl(bool needClear)
 {
 	if (_isCtrlBegin)
@@ -77,6 +76,7 @@ void displayMgr::drawDisplay(int x, int y)
 void displayMgr::drawDisplay(int x, int y, int w, int h)
 {
 	ofPushStyle();
+	ofSetColor(255);
 	if (_isSingleColor)
 	{
 		ofBackground(_displayBGColorFrom);

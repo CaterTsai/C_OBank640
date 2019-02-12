@@ -73,7 +73,7 @@ void DSphereParticle::draw(int x, int y, int z)
 	ofPushMatrix();
 	ofTranslate(x, y, z);
 	ofPushStyle();
-	ofSetDepthTest(true);
+	
 	ofSetColor(_pColor);
 	{
 		for (auto& iter : _particleList)
@@ -90,7 +90,6 @@ void DSphereParticle::draw(int x, int y, int z)
 		//ofSetColor(255);
 		//_tri.drawWireframe();
 	}
-	ofSetDepthTest(false);
 	ofPopStyle();
 	ofPopMatrix();
 }

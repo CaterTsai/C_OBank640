@@ -9,11 +9,11 @@ public:
 		:SBase(eSIdle02)
 	{}
 
-	void update(float delta) override
+	void updateFunc(float delta) override
 	{
 		_dTrain.update(delta);
 	}
-	void draw() override {
+	void drawFunc() override {
 		displayMgr::GetInstance()->beginDisplay(eDisplayFront);
 		_dTrain.draw();
 		displayMgr::GetInstance()->endDisplay();
@@ -24,7 +24,7 @@ public:
 		ss << getSceneName();
 		ofDrawBitmapStringHighlight(ss.str(), pos);
 	};
-	void start() override
+	void startFunc() override
 	{
 		displayMgr::GetInstance()->setBGMode(true);
 		displayMgr::GetInstance()->setBGColor(ofColor(0));
@@ -32,7 +32,7 @@ public:
 		_dTrain.start();
 
 	};
-	void stop() override
+	void stopFunc() override
 	{
 		_dTrain.stop();
 	};

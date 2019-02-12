@@ -145,13 +145,13 @@ void DHalo::checkHaloMgr()
 
 void DHalo::addNewHaloUnit()
 {
-	float size = ofRandom(0.01, 0.1) * ofGetWindowWidth();
+	float size = ofRandom(0.01, 0.1) * cWindowWidth;
 	float t = ofRandom(0.3, 1.0)* cHaloUnitMaxDuration;
 	ofVec2f fromPos, toPos;
-	fromPos.x = ofRandom(0, ofGetWindowWidth());
-	fromPos.y = ofRandom(ofGetWindowHeight() * 0.5, ofGetWindowHeight());
+	fromPos.x = ofRandom(0, cWindowWidth);
+	fromPos.y = ofRandom(cWindowHeight * 0.5, cWindowHeight);
 	toPos = fromPos;
-	if (fromPos.x >= ofGetWindowWidth() * 0.5)
+	if (fromPos.x >= cWindowWidth * 0.5)
 	{
 		toPos.x -= cHaloUnitMoveLimit * ofRandom(0.3, 1.0);
 	}

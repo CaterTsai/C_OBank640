@@ -31,7 +31,6 @@ void ofViewerApp::update()
 	videoMgr::GetInstance()->update();
 	_scenceMgr[_nowScence]->update(delta);
 
-
 	ofSetWindowTitle(ofToString(ofGetFrameRate()));
 }
 
@@ -43,13 +42,21 @@ void ofViewerApp::draw()
 
 	displayMgr::GetInstance()->drawCtrl(0, 0);
 
+	ofPushStyle();
+	ofSetLineWidth(5);
+	_isStart ? ofSetColor(0, 255, 0) : ofSetColor(255, 0, 0);	
+	ofNoFill();
+	displayMgr::GetInstance()->drawDisplay(0, cViewHeight * 0.5f, cViewHeight * 0.5f * (16.0f / 9.0f ), cViewHeight * 0.5f);
+	ofDrawRectangle(0, cViewHeight * 0.5f, cViewHeight * 0.5f * (16.0f / 9.0f), cViewHeight * 0.5f);
+	ofPopStyle();
+
 	if (_showMsg)
 	{
 		ofSetColor(255);
 		ostringstream ss;
-		ss << _isStart ? "Play" : "Stop";
-		ss << "Target :" + _targetLayer;
-		ofDrawBitmapStringHighlight(ss.str(), ofVec2f(0, 85));
+		ss << (_isStart ? "Play" : "Stop") << endl;
+		ss << "Target :" + ofToString(_targetLayer);
+		ofDrawBitmapStringHighlight(ss.str(), ofVec2f(0, 70));
 
 		_scenceMgr[_nowScence]->drawMsg(ofVec2f(0, 110));
 	}
@@ -166,6 +173,7 @@ void ofViewerApp::control(eCtrlType ctrl, int value)
 #pragma endregion
 }
 
+
 #pragma endregion
 //----------------------------------
 void ofViewerApp::initScene()
@@ -186,8 +194,10 @@ void ofViewerApp::initScene()
 	_scenceMgr.push_back(ofPtr<SItaly05>(new SItaly05()));
 	_scenceMgr.push_back(ofPtr<SItaly06>(new SItaly06()));
 
-	_nowScence = eSIdle01;
+	_nowScence = eSFrance03;
 }
+
+
 
 //----------------------------------
 void ofViewerApp::initVideo()

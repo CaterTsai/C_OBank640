@@ -9,8 +9,8 @@ public:
 		:SBase(eSItaly04)
 	{}
 
-	void update(float delta) override {}
-	void draw() override {
+	void updateFunc(float delta) override {}
+	void drawFunc() override {
 		//displayMgr::GetInstance()->updateOnUnitBegin(eBack, true);
 		//postFilter::GetInstance()->_postMgr[eBack].begin();
 		//ofFill();
@@ -25,10 +25,10 @@ public:
 		ss << getSceneName();
 		ofDrawBitmapStringHighlight(ss.str(), pos);
 	};
-	void start() override 
+	void startFunc() override
 	{
 	};
-	void stop() override 
+	void stopFunc() override
 	{
 	};
 	void control(eCtrlType ctrl, int value = cMidiButtonPress) override {};

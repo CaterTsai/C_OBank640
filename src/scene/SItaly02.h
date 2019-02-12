@@ -9,8 +9,8 @@ public:
 		:SBase(eSItaly02)
 	{}
 
-	void update(float delta) override {}
-	void draw() override {
+	void updateFunc(float delta) override {}
+	void drawFunc() override {
 	};
 	void drawMsg(ofVec2f pos) override 
 	{
@@ -18,10 +18,10 @@ public:
 		ss << getSceneName();
 		ofDrawBitmapStringHighlight(ss.str(), pos);
 	};
-	void start() override 
+	void startFunc() override
 	{
 	};
-	void stop() override 
+	void stopFunc() override
 	{
 	};
 	void control(eCtrlType ctrl, int value = cMidiButtonPress) override {};

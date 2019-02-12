@@ -16,11 +16,35 @@ public:
 		,_isStart(false)
 	{}
 
-	virtual void update(float delta){}
-	virtual void draw() {};
+	void update(float delta){
+		if (_isStart)
+		{
+			updateFunc(delta);
+		}
+	}
+	void draw() {
+		if (_isStart)
+		{
+			drawFunc();
+		}
+	};
+	void start() 
+	{
+		_isStart = true;
+		startFunc();
+	};
+	void stop() 
+	{
+		_isStart = false;
+		stopFunc();
+	};
+
+	virtual void updateFunc(float delta) {};
+	virtual void drawFunc() {};
+	virtual void startFunc() {};
+	virtual void stopFunc() {};
+
 	virtual void drawMsg(ofVec2f pos) {};
-	virtual void start() {};
-	virtual void stop() {};
 	virtual void control(eCtrlType ctrl, int value = cMidiButtonPress) {};
 	virtual string getSceneName() { return "SBase"; }
 

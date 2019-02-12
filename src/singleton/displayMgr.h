@@ -11,6 +11,7 @@ const int cDisplayCanvasHeight = cWindowHeight;
 class displayMgr
 {
 public:
+
 	void beginCtrl(bool needClear = true);
 	void endCtrl();
 
@@ -55,7 +56,7 @@ private:
 		_ctrlCanvas.allocate(cCtrlCanvasWidth, cCtrlCanvasHeight);
 		for (auto& iter : _displayCanvas)
 		{
-			iter.allocate(cDisplayCanvasWidth, cDisplayCanvasHeight);
+			iter.allocate(cDisplayCanvasWidth, cDisplayCanvasHeight, GL_RGBA);
 		}
 	}
 		

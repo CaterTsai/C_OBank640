@@ -141,10 +141,10 @@ void DTrain::addNewTrainUnit()
 	_degree += ofRandom(45, 180);
 	_degree %= 360;
 
-	ofVec2f v(ofRandom(width, ( (ofGetWindowWidth() - width) * 0.5)), 0);
+	ofVec2f v(ofRandom(width, ( (cWindowWidth - width) * 0.5)), 0);
 	v.rotate(_degree);
-	v.x += ofGetWindowWidth() * 0.5;
-	v.y += ofGetWindowHeight() * 0.5;
+	v.x += cWindowWidth * 0.5;
+	v.y += cWindowHeight * 0.5;
 	int z = ofRandom(0, -500);
 
 	_trainMgr.push_back(trainUnit(_trainVideoList[_videoIndex], cTrainUnitMaxDuration * ofRandom(0.5, 1.0), ofVec3f(v.x, v.y, z), width, height));
