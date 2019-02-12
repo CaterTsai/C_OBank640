@@ -41,15 +41,18 @@ void ofViewerApp::draw()
 	ofSetBackgroundColor(0);
 	_scenceMgr[_nowScence]->draw();
 
+	displayMgr::GetInstance()->drawCtrl(0, 0);
 
 	if (_showMsg)
 	{
 		ofSetColor(255);
-		string state =  + _isStart ? "Play" : "Stop";
-		ofDrawBitmapStringHighlight("State :" + state, ofVec2f(0, 95));
+		ostringstream ss;
+		ss << _isStart ? "Play" : "Stop";
+		ss << "Target :" + _targetLayer;
+		ofDrawBitmapStringHighlight(ss.str(), ofVec2f(0, 85));
+
 		_scenceMgr[_nowScence]->drawMsg(ofVec2f(0, 110));
 	}
-
 }
 
 //----------------------------------
@@ -147,7 +150,7 @@ void ofViewerApp::control(eCtrlType ctrl, int value)
 	{
 		if (value == cMidiButtonPress)
 		{
-			postFilter::GetInstance()->filterEnable(ePostFilterType::ePostBloom);
+			postFilter::GetInstance()->filterEnable(ePostFilterType::ePostBloom, _targetLayer);
 		}
 		break;
 	}
@@ -155,7 +158,7 @@ void ofViewerApp::control(eCtrlType ctrl, int value)
 	{
 		if (value == cMidiButtonPress)
 		{
-			postFilter::GetInstance()->filterEnable(ePostFilterType::ePostBloomTwo);
+			postFilter::GetInstance()->filterEnable(ePostFilterType::ePostBloomTwo, _targetLayer);
 		}
 		break;
 	}

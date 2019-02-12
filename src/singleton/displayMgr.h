@@ -2,8 +2,8 @@
 
 #include "../constParameter.h"
 
-const int cCtrlCanvasWidth = 1000;
-const int cCtrlCanvasHeight = 1000;
+const int cCtrlCanvasWidth = cViewWidth;
+const int cCtrlCanvasHeight = cViewWidth;
 
 const int cDisplayCanvasWidth = cWindowWidth;
 const int cDisplayCanvasHeight = cWindowHeight;
@@ -19,6 +19,7 @@ public:
 
 	void drawCtrl(int x, int y);
 	void drawDisplay(int x, int y);
+	void drawDisplay(int x, int y, int w, int h);
 	void clearAllDisplay();
 
 	void setCoverAlpha(int alpha);

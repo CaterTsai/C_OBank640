@@ -13,6 +13,7 @@ public:
 	ofViewerApp()
 		:_isStart(false)
 		, _showMsg(true)
+		, _targetLayer(eDisplayBack)
 	{
 	}
 
@@ -24,7 +25,7 @@ public:
 private:
 	bool _showMsg;
 	float _mainTimer;
-
+	eDisplayLayer _targetLayer;
 	//Scence
 private:
 	void initScene();
@@ -33,6 +34,7 @@ private:
 	vector<ofPtr<SBase>> _scenceMgr;
 	eSType	_nowScence;
 
+	
 	//Video
 public:
 	void initVideo();
@@ -49,5 +51,4 @@ private:
 		int value;
 	};
 	list<midiCtrlData> _midiQueue;
-
 };

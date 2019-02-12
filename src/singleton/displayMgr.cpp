@@ -71,6 +71,11 @@ void displayMgr::drawCtrl(int x, int y)
 
 void displayMgr::drawDisplay(int x, int y)
 {
+	drawDisplay(x, y, cDisplayCanvasWidth, cDisplayCanvasHeight);
+}
+
+void displayMgr::drawDisplay(int x, int y, int w, int h)
+{
 	ofPushStyle();
 	if (_isSingleColor)
 	{
@@ -84,12 +89,12 @@ void displayMgr::drawDisplay(int x, int y)
 	ofSetColor(255);
 	for (auto& iter : _displayCanvas)
 	{
-		iter.draw(x, y);
+		iter.draw(x, y, w, h);
 	}
 
 	ofSetColor(0, _displayCoverAlpha);
 	ofFill();
-	ofDrawRectangle(x, y, cDisplayCanvasWidth, cDisplayCanvasHeight);
+	ofDrawRectangle(x, y, w, h);
 
 	ofPopStyle();
 }

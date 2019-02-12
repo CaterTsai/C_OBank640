@@ -5,6 +5,9 @@
 const int cWindowWidth = 1920;
 const int cWindowHeight = 1080;
 
+const int cViewWidth = 1024;
+const int cViewHeight = 1024;
+
 enum eDisplayLayer : int{
 	eDisplayFront = 0,
 	eDisplayBack,

@@ -277,6 +277,7 @@
     <ClCompile Include="src\ofViewerApp.cpp" />
     <ClCompile Include="src\singleton\ctrlMap.cpp" />
     <ClCompile Include="src\singleton\displayMgr.cpp" />
+    <ClCompile Include="src\singleton\midiCtrl.cpp" />
     <ClCompile Include="src\singleton\postFilter.cpp" />
     <ClCompile Include="src\singleton\videoMgr.cpp" />
   </ItemGroup>
@@ -426,6 +427,7 @@
     <ClInclude Include="src\scene\SType.h" />
     <ClInclude Include="src\singleton\ctrlMap.h" />
     <ClInclude Include="src\singleton\displayMgr.h" />
+    <ClInclude Include="src\singleton\midiCtrl.h" />
     <ClInclude Include="src\singleton\postFilter.h" />
     <ClInclude Include="src\singleton\videoMgr.h" />
   </ItemGroup>

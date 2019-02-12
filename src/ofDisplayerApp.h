@@ -20,6 +20,4 @@ public:
 
 	void newMidiMessage(ofxMidiMessage& msg) override;
 
-private:
-	int _coverAlpha;
 };

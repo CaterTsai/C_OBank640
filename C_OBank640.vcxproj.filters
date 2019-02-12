@@ -325,6 +325,9 @@
     <ClCompile Include="src\ofViewerApp.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\singleton\midiCtrl.cpp">
+      <Filter>src\singleton</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -862,6 +865,9 @@
     </ClInclude>
     <ClInclude Include="src\ofViewerApp.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\singleton\midiCtrl.h">
+      <Filter>src\singleton</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
