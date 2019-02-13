@@ -23,8 +23,6 @@ public:
 	void keyPressed(int key);
 	void control(eCtrlType ctrl, int value = cMidiButtonPress);
 
-private:
-	void drawPreview();
 
 private:
 	bool _showMsg;

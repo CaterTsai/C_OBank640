@@ -9,17 +9,17 @@ public:
 		:SBase(eSItaly04)
 	{}
 
-	void updateFunc(float delta) override {}
+	void updateFunc(float delta) override 
+	{
+		_dr.update(delta);
+	}
 	void drawFunc() override {
-		//displayMgr::GetInstance()->updateOnUnitBegin(eBack, true);
-		//postFilter::GetInstance()->_postMgr[eBack].begin();
-		//ofFill();
-		//ofSetColor(255);
-		//	//ofDrawRectangle(0, 0, 1920, 1080);
-		//postFilter::GetInstance()->_postMgr[eBack].end();
-		//displayMgr::GetInstance()->updateOnUnitEnd(eBack);
+		displayMgr::GetInstance()->beginDisplay(eDisplayFront);
+		ofSetColor(255);
+		_dr.draw();
+		displayMgr::GetInstance()->endDisplay();
 	};
-	void drawMsg(ofVec2f pos) override 
+	void drawMsg(ofVec2f pos) override
 	{
 		ostringstream ss;
 		ss << getSceneName();
@@ -27,13 +27,19 @@ public:
 	};
 	void startFunc() override
 	{
+		displayMgr::GetInstance()->setBGMode(false, OF_GRADIENT_LINEAR);
+		displayMgr::GetInstance()->setBGColor(ofColor(25, 25, 100), ofColor(10, 10, 50));
+		displayMgr::GetInstance()->clearAllDisplay();
+
+		_dr.start();
 	};
 	void stopFunc() override
 	{
+		_dr.stop();
 	};
 	void control(eCtrlType ctrl, int value = cMidiButtonPress) override {};
 	string getSceneName() { return "SItaly04"; }
 
 private:
-
+	DRain _dr;
 };

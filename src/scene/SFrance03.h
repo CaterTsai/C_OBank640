@@ -9,7 +9,7 @@ public:
 		:SBase(eSFrance03)
 	{
 		_sphere.setResolution(4);
-		_sphere.setPosition(cDisplayCanvasWidth * 0.5, cDisplayCanvasHeight * 0.5, 0);
+		_sphere.setPosition(0, 0, 0);
 		_sphere.setRadius(cDisplayCanvasHeight * 0.1);
 		
 	}
@@ -17,14 +17,25 @@ public:
 	void updateFunc(float delta) override 
 	{
 		_dSP.update(delta);
-		
+		_r += _rV * delta;
+		if (_r > 360)
+		{
+			_r -= 360;
+		}
+
 	}
 	void drawFunc() override {
 		displayMgr::GetInstance()->beginDisplay(eDisplayFront);
 		ofSetColor(255);
 		ofSetDepthTest(true);
+
 		_dSP.draw(cDisplayCanvasWidth * 0.5, cDisplayCanvasHeight * 0.5);
+		ofPushMatrix();
+		ofTranslate(cDisplayCanvasWidth * 0.5, cDisplayCanvasHeight * 0.5);
+		ofRotateX(sin(_r * DEG_TO_RAD) * 360.0);
+		ofRotateY(cos(_r * DEG_TO_RAD) * 360.0);
 		_sphere.drawWireframe();
+		ofPopMatrix();
 		ofSetDepthTest(false);
 
 		displayMgr::GetInstance()->endDisplay();
@@ -37,6 +48,8 @@ public:
 	};
 	void startFunc() override 
 	{
+		_r = 0;
+		_rV = 20;
 		displayMgr::GetInstance()->setBGMode(false, OF_GRADIENT_LINEAR);
 		displayMgr::GetInstance()->setBGColor(ofColor(0), ofColor(20, 0, 50));
 		displayMgr::GetInstance()->clearAllDisplay();
@@ -54,4 +67,5 @@ public:
 private:
 	DSphereParticle _dSP;
 	ofSpherePrimitive _sphere;
+	float _r, _rV;
 };

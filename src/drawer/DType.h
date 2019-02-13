@@ -8,6 +8,7 @@ enum eDType
 	eDCloud,
 	eDBreeze,
 	eDTail,
+	eDRain,
 	eDShootingStar,
 	eDTypeNum
 };

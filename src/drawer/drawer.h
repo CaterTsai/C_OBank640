@@ -6,4 +6,5 @@
 #include "DClouds.h"
 #include "DBreeze.h"
 #include "DTail.h"
+#include "DRain.h"
 #include "DShootingStar.h"

@@ -7,6 +7,7 @@
 #include "midiCtrl.h"
 #include "ctrlMap.h"
 #include "postFilter.h"
+#include "videoMgr.h"
 
 class SBase
 {

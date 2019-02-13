@@ -35,7 +35,12 @@ enum eVideoType : int
 	, eVideoTrainView13
 	, eVideoTrainView14
 
-
+	, eVideoDarkOcean
+	, eVideoWaterWave
+	, eVideoEndlessOcean
+	, eVideoUnderWater
+	, eVideoNapoli
+	, eVideoTwilight
 	, eVideoNum
 };
 

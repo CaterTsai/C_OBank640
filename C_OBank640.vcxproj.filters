@@ -328,6 +328,9 @@
     <ClCompile Include="src\singleton\midiCtrl.cpp">
       <Filter>src\singleton</Filter>
     </ClCompile>
+    <ClCompile Include="src\drawer\DRain.cpp">
+      <Filter>src\drawer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -868,6 +871,9 @@
     </ClInclude>
     <ClInclude Include="src\singleton\midiCtrl.h">
       <Filter>src\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="src\drawer\DRain.h">
+      <Filter>src\drawer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

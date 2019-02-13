@@ -13,8 +13,8 @@ const float cTailParticalSpeedMin = 50.0f;
 const float cTailParticalSpeedMax = 150.0f;
 const float cTailFlowFieldsMin = 50.0f;
 const float cTailFlowFieldsMax = 150.0f;
-const int cTailEmitterNumMin = 1;
-const int cTailEmitterNumMax = 5;
+const int cTailEmitterNumMin = 10;
+const int cTailEmitterNumMax = 30;
 const float cTailEmitterTSlow = 1.0;
 const float cTailEmitterTFast = 0.2;
 const ofColor cTailBaseColor(0, 45, 192);
@@ -77,7 +77,7 @@ public:
 	DTail()
 		:DBase(eDTail)
 		, _emitterNum(cTailEmitterNumMin)
-		, _emitterT(cTailEmitterTSlow)
+		, _emitterT(cTailEmitterTFast)
 		, _timer(0.0f)
 
 	{

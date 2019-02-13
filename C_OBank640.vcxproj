@@ -190,6 +190,7 @@
     <ClCompile Include="src\drawer\DBreeze.cpp" />
     <ClCompile Include="src\drawer\DClouds.cpp" />
     <ClCompile Include="src\drawer\DHalo.cpp" />
+    <ClCompile Include="src\drawer\DRain.cpp" />
     <ClCompile Include="src\drawer\DShootingStar.cpp" />
     <ClCompile Include="src\drawer\DSphereParticle.cpp" />
     <ClCompile Include="src\drawer\DTail.cpp" />
@@ -306,6 +307,7 @@
     <ClInclude Include="src\drawer\DBreeze.h" />
     <ClInclude Include="src\drawer\DClouds.h" />
     <ClInclude Include="src\drawer\DHalo.h" />
+    <ClInclude Include="src\drawer\DRain.h" />
     <ClInclude Include="src\drawer\drawer.h" />
     <ClInclude Include="src\drawer\drawParameter.h" />
     <ClInclude Include="src\drawer\DShootingStar.h" />

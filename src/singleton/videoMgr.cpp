@@ -46,7 +46,7 @@ void videoMgr::add(eVideoType type, string file)
 
 	if (_videos[type].load(file))
 	{
-		_videos[type].setLoopState(ofLoopType::OF_LOOP_NONE);
+		_videos[type].setLoopState(ofLoopType::OF_LOOP_NORMAL);
 		
 	}
 	else

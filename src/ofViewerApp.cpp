@@ -194,7 +194,7 @@ void ofViewerApp::initScene()
 	_scenceMgr.push_back(ofPtr<SItaly05>(new SItaly05()));
 	_scenceMgr.push_back(ofPtr<SItaly06>(new SItaly06()));
 
-	_nowScence = eSFrance03;
+	_nowScence = eSItaly04;
 }
 
 
@@ -206,6 +206,13 @@ void ofViewerApp::initVideo()
 	{
 		videoMgr::GetInstance()->add((eVideoType)i, "videos/train/" + ofToString(i + 1, 2, '0') + ".avi");
 	}
+
+	videoMgr::GetInstance()->add(eVideoDarkOcean, "videos/darkOcean.avi");
+	videoMgr::GetInstance()->add(eVideoWaterWave, "videos/waterWave.avi");
+	videoMgr::GetInstance()->add(eVideoEndlessOcean, "videos/endlessOcean.avi");
+	videoMgr::GetInstance()->add(eVideoUnderWater, "videos/underWater.avi");
+	videoMgr::GetInstance()->add(eVideoNapoli, "videos/napoli.avi");
+	videoMgr::GetInstance()->add(eVideoTwilight, "videos/twilightOcean.avi");
 }
 
 //----------------------------------
