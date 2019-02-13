@@ -1,14 +1,15 @@
 #include "ofViewerApp.h"
-
+#include "milightMgr.h"
+#include "displayMgr.h"
+#include "videoMgr.h"
 
 #pragma region Basic
 void ofViewerApp::setup()
 {
-
 	//Singleton
 	displayMgr::GetInstance();
-	postFilter::GetInstance()->init(cWindowWidth, cWindowHeight, true);
-
+	postFilter::GetInstance()->init(2048 , 2048, false);
+	milightMgr::GetInstance()->setup();
 	midiCtrl::GetInstance()->init();
 	midiCtrl::GetInstance()->addListener(this);
 
@@ -30,7 +31,7 @@ void ofViewerApp::update()
 	updateMidi();
 	videoMgr::GetInstance()->update();
 	_scenceMgr[_nowScence]->update(delta);
-
+	milightMgr::GetInstance()->update(delta);
 	ofSetWindowTitle(ofToString(ofGetFrameRate()));
 }
 
@@ -40,14 +41,16 @@ void ofViewerApp::draw()
 	ofSetBackgroundColor(0);
 	_scenceMgr[_nowScence]->draw();
 
-	displayMgr::GetInstance()->drawCtrl(0, 0);
+	milightMgr::GetInstance()->draw(0, 0);
+
+
 
 	ofPushStyle();
 	ofSetLineWidth(5);
 	_isStart ? ofSetColor(0, 255, 0) : ofSetColor(255, 0, 0);	
 	ofNoFill();
-	displayMgr::GetInstance()->drawDisplay(0, cViewHeight * 0.5f, cViewHeight * 0.5f * (16.0f / 9.0f ), cViewHeight * 0.5f);
-	ofDrawRectangle(0, cViewHeight * 0.5f, cViewHeight * 0.5f * (16.0f / 9.0f), cViewHeight * 0.5f);
+	displayMgr::GetInstance()->drawDisplayPreview(500, cViewHeight * 0.5f, cViewHeight * 0.5f * (16.0f / 9.0f ), cViewHeight * 0.5f);
+	ofDrawRectangle(500, cViewHeight * 0.5f, cViewHeight * 0.5f * (16.0f / 9.0f), cViewHeight * 0.5f);
 	ofPopStyle();
 
 	if (_showMsg)
@@ -56,9 +59,9 @@ void ofViewerApp::draw()
 		ostringstream ss;
 		ss << (_isStart ? "Play" : "Stop") << endl;
 		ss << "Target :" + ofToString(_targetLayer);
-		ofDrawBitmapStringHighlight(ss.str(), ofVec2f(0, 70));
+		ofDrawBitmapStringHighlight(ss.str(), ofVec2f(500, 70));
 
-		_scenceMgr[_nowScence]->drawMsg(ofVec2f(0, 110));
+		_scenceMgr[_nowScence]->drawMsg(ofVec2f(500, 110));
 	}
 }
 
@@ -169,6 +172,30 @@ void ofViewerApp::control(eCtrlType ctrl, int value)
 		}
 		break;
 	}
+	case eCtrl_Filter3:
+	{
+		if (value == cMidiButtonPress)
+		{
+			postFilter::GetInstance()->filterEnable(ePostFilterType::ePostKaleidoscope, _targetLayer);
+		}
+		break;
+	}
+	case eCtrl_Filter4:
+	{
+		if (value == cMidiButtonPress)
+		{
+			postFilter::GetInstance()->filterEnable(ePostFilterType::ePostNoiseWarp, _targetLayer);
+		}
+		break;
+	}
+	case eCtrl_Filter5:
+	{
+		if (value == cMidiButtonPress)
+		{
+			postFilter::GetInstance()->filterEnable(ePostFilterType::ePostToon, _targetLayer);
+		}
+		break;
+	}
 	}
 #pragma endregion
 }
@@ -194,7 +221,7 @@ void ofViewerApp::initScene()
 	_scenceMgr.push_back(ofPtr<SItaly05>(new SItaly05()));
 	_scenceMgr.push_back(ofPtr<SItaly06>(new SItaly06()));
 
-	_nowScence = eSItaly04;
+	_nowScence = eSItaly06;
 }
 
 
@@ -213,6 +240,7 @@ void ofViewerApp::initVideo()
 	videoMgr::GetInstance()->add(eVideoUnderWater, "videos/underWater.avi");
 	videoMgr::GetInstance()->add(eVideoNapoli, "videos/napoli.avi");
 	videoMgr::GetInstance()->add(eVideoTwilight, "videos/twilightOcean.avi");
+	videoMgr::GetInstance()->add(eVideoParis, "videos/paris.avi");
 }
 
 //----------------------------------

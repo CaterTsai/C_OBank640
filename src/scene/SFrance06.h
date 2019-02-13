@@ -7,7 +7,9 @@ class SFrance06 : public SBase {
 public:
 	SFrance06()
 		:SBase(eSFrance06)
-	{}
+	{
+		_moon.load("moonLight.png");
+	}
 
 	void updateFunc(float delta) override 
 	{
@@ -16,7 +18,9 @@ public:
 	void drawFunc() override {
 		displayMgr::GetInstance()->beginDisplay(eDisplayFront);
 		ofSetColor(255);
-		ofDrawCircle(cDisplayCanvasWidth * 0.5, cDisplayCanvasHeight * 0.25, cDisplayCanvasHeight * 0.1);
+		float width = cDisplayCanvasWidth * 0.5;
+		float height = width * _moon.getHeight() / _moon.getWidth();
+		_moon.draw((cDisplayCanvasWidth - width) * 0.5, height * -0.2, width, height);
 		displayMgr::GetInstance()->endDisplay();
 
 		displayMgr::GetInstance()->beginDisplay(eDisplayBack);
@@ -46,4 +50,5 @@ public:
 
 private:
 	DClouds _dc;
+	ofImage _moon;
 };

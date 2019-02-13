@@ -1,6 +1,6 @@
 #include "displayMgr.h"
 #include "ofxXmlSettings.h"
-
+#include "postFilter.h"
 //------------------------------
 void displayMgr::beginCtrl(bool needClear)
 {
@@ -42,11 +42,12 @@ void displayMgr::beginDisplay(eDisplayLayer layer, bool needClear)
 
 	_drawLayer = layer;
 	_displayCanvas[_drawLayer].begin();
+	
 	if (needClear)
 	{
 		ofClear(0);
 	}
-
+	postFilter::GetInstance()->_postMgr[layer].begin();
 }
 
 void displayMgr::endDisplay()
@@ -56,7 +57,9 @@ void displayMgr::endDisplay()
 		ofLog(OF_LOG_WARNING, "[displayMgr::endDisplay]Need Begin");
 		return;
 	}
+	postFilter::GetInstance()->_postMgr[_drawLayer].end();
 	_displayCanvas[_drawLayer].end();
+	
 	_drawLayer = eDisplayUnknow;
 }
 
@@ -92,10 +95,23 @@ void displayMgr::drawDisplay(int x, int y, int w, int h)
 		iter.draw(x, y, w, h);
 	}
 
+	_cover.draw(0, 0, cDisplayCanvasWidth, cDisplayCanvasHeight);
+
 	ofSetColor(0, _displayCoverAlpha);
 	ofFill();
 	ofDrawRectangle(x, y, w, h);
 
+	ofPopStyle();
+}
+
+void displayMgr::drawDisplayPreview(int x, int y, int w, int h)
+{
+	ofPushStyle();
+	ofSetColor(255);
+	for (auto& iter : _displayCanvas)
+	{
+		iter.draw(x, y, w, h);
+	}
 	ofPopStyle();
 }
 

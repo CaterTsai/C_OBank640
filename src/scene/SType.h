@@ -17,6 +17,5 @@ enum eSType : int
 	, eSItaly04
 	, eSItaly05
 	, eSItaly06
-	, eSEnding
 	, eSTypeNum
 };

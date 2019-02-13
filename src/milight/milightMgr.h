@@ -45,7 +45,26 @@ private:
 	milightCueTable _cueTable;
 #pragma endregion
 
-	
+	//-------------------
+	//Singleton
+	//-------------------
+private:
+	milightMgr()
+		:_isSetup(false)
+	{};
+	~milightMgr()
+	{
+		milightMgr::Destroy();
+	}
+	milightMgr(milightMgr const&);
+	void operator=(milightMgr const&);
+
+public:
+	static milightMgr* GetInstance();
+	static void Destroy();
+
+private:
+	static milightMgr *pInstance;
 
 
 

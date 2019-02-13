@@ -4,7 +4,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	_milight.setup();
+	
 	ofBackground(0);
 
 	initVideoMgr();
@@ -19,7 +19,7 @@ void ofApp::update(){
 	float delta = ofGetElapsedTimef() - _mainTimer;
 	_mainTimer += delta;
 
-	_milight.update(delta);
+	
 	
 
 	videoMgr::GetInstance()->update();
@@ -34,24 +34,7 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-	switch (key)
-	{
-	case 'q':
-	{
-		_milight.playCue();
-		break;
-	}
-	case 'w':
-	{
-		_milight.nextCue();
-		break;
-	}
-	case 'e':
-	{
-		_milight.clearCue();
-		break;
-	}
-	}
+
 }
 
 #pragma region Video Mgr

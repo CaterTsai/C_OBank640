@@ -21,6 +21,7 @@ public:
 	void drawCtrl(int x, int y);
 	void drawDisplay(int x, int y);
 	void drawDisplay(int x, int y, int w, int h);
+	void drawDisplayPreview(int x, int y, int w, int h);
 	void clearAllDisplay();
 
 	void setCoverAlpha(int alpha);
@@ -40,6 +41,8 @@ private:
 	eDisplayLayer _drawLayer;
 	array<ofFbo, eDisplayLayerNum> _displayCanvas;
 
+	ofImage _cover;
+
 //-------------------
 //Singleton
 //-------------------
@@ -58,6 +61,8 @@ private:
 		{
 			iter.allocate(cDisplayCanvasWidth, cDisplayCanvasHeight, GL_RGBA);
 		}
+
+		_cover.load("cover.png");
 	}
 		
 	~displayMgr(){

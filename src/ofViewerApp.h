@@ -1,10 +1,7 @@
 #pragma once
 
 #include "constParameter.h"
-#include "displayMgr.h"
-#include "videoMgr.h"
 #include "midiCtrl.h"
-
 #include "sceneMgr.h"
 
 class ofViewerApp : public ofBaseApp, public ofxMidiListener {
@@ -13,7 +10,7 @@ public:
 	ofViewerApp()
 		:_isStart(false)
 		, _showMsg(true)
-		, _targetLayer(eDisplayBack)
+		, _targetLayer(eDisplayFront)
 	{
 	}
 

@@ -7,7 +7,7 @@ void DRain::update(float delta)
 
 	if (_timer < 0.0f)
 	{
-		_timer = 1.0f / 30.0f;
+		_timer = _interval;
 		_rainCanvas.begin();
 		ofClear(0);
 		drawRain();
@@ -25,8 +25,9 @@ void DRain::start()
 {
 	_isStart = true;
 	_rainDegree = 90;
-	_timer = 1.0f / 30.0f;
-	_rainLevel = 0.5f;
+	setRainLevel(0.5f);
+	_timer = _interval;
+	
 }
 
 void DRain::stop()
@@ -37,6 +38,7 @@ void DRain::stop()
 void DRain::setRainLevel(float level)
 {
 	_rainLevel = level;
+	_interval = ofMap(_rainLevel, 0.0f, 1.0f, cRainSlowest, cRainFastest);
 }
 
 void DRain::drawRain()

@@ -857,9 +857,6 @@
     <ClInclude Include="src\drawer\DShootingStar.h">
       <Filter>src\drawer</Filter>
     </ClInclude>
-    <ClInclude Include="src\scene\SEnding.h">
-      <Filter>src\scence\sceneList</Filter>
-    </ClInclude>
     <ClInclude Include="src\drawer\DHalo.h">
       <Filter>src\drawer</Filter>
     </ClInclude>

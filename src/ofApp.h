@@ -17,8 +17,6 @@ public:
 private:
 	float _mainTimer;
 
-	milightMgr _milight;
-
 #pragma region VideoMgr
 public:
 	void initVideoMgr();

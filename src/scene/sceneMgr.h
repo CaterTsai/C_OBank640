@@ -5,7 +5,6 @@
 
 #include "SIdle01.h"
 #include "SIdle02.h"
-#include "SEnding.h"
 
 #include "SFrance01.h"
 #include "SFrance02.h"

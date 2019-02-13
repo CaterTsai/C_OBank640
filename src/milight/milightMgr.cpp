@@ -17,7 +17,7 @@ void milightMgr::update(float delta)
 void milightMgr::draw(int x, int y)
 {
 	drawCueTable(x, y);
-	drawLight(x + 300, y, 300, 100);
+	drawLight(x + 300, y, 90, 300);
 }
 
 void milightMgr::toCue(int cueNo)
@@ -88,8 +88,8 @@ void milightMgr::updateLight(float delta)
 
 void milightMgr::drawLight(int x, int y, int width, int height)
 {
-	float unitW = (float)width / cLightNum;
-	float unitH = (float)height / 3.0f;
+	float unitW = (float)width / 3.0f;
+	float unitH = (float)height / cLightNum;
 
 	ofPushMatrix();
 	ofTranslate(x, y);
@@ -102,20 +102,20 @@ void milightMgr::drawLight(int x, int y, int width, int height)
 		ofDrawRectangle(pos.x, pos.y, unitW, unitH);
 
 		ofSetColor(iter.getColdWhite());
-		ofDrawRectangle(pos.x, pos.y + unitH, unitW, unitH);
+		ofDrawRectangle(pos.x + unitW, pos.y, unitW, unitH);
 
 		ofColor c = cLightWarmWhite; ;
 		c.setBrightness(iter.getWarmWhite());
 		ofSetColor(c);
-		ofDrawRectangle(pos.x, pos.y + unitH * 2, unitW, unitH);
+		ofDrawRectangle(pos.x + unitW * 2, pos.y, unitW, unitH);
 		
 		ofNoFill();
 		ofSetColor(255);
-		ofDrawRectangle(pos, unitW, unitH * 3);
+		ofDrawRectangle(pos, unitW * 3, unitH);
 		ofPopStyle();
 
 		
-		pos.x += unitW;
+		pos.y += unitH;
 	}
 	ofPopMatrix();
 }
@@ -130,5 +130,28 @@ void milightMgr::initCueTable()
 void milightMgr::drawCueTable(int x, int y)
 {
 	_cueTable.drawGUI(x, y);
+}
+#pragma endregion
+
+
+#pragma region Singleton
+//--------------------------------------------------------------
+milightMgr* milightMgr::pInstance = 0;
+milightMgr* milightMgr::GetInstance()
+{
+	if (pInstance == 0)
+	{
+		pInstance = new milightMgr();
+	}
+	return pInstance;
+}
+
+//--------------------------------------------------------------
+void milightMgr::Destroy()
+{
+	if (pInstance != 0)
+	{
+		delete pInstance;
+	}
 }
 #pragma endregion
