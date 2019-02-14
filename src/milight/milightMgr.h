@@ -36,19 +36,20 @@ private:
 #pragma endregion
 
 #pragma region GUI
+public:
+	void setLightIdx(int idx);
 private:
 	void initGUI();
 	void updateGUI();
 	void drawGUI(int x, int y);
 
-	void setLightIdx(int idx);
 	void onGUIValueUpdate();
 private:
 	ofxPanelEx _lightGUI;
 	ofParameter<string> _gLLightNo;
 	ofParameter<ofColor> _gCLightColor;
 	ofParameter<int> _gSWarmWhite, _gSColdWhite;
-	int _lightIdx;
+	int _lightNo;
 #pragma endregion
 
 

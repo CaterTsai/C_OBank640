@@ -1,6 +1,6 @@
 #pragma once
 
-const int cLightNum = 6;
+const int cLightNum = 7;
 const int cLightStartAddr = 0;
 const int cLightDMXChannel = 5;
 

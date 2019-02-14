@@ -6,18 +6,22 @@ void milightMgr::setup()
 {
 	initLight();
 	initCueTable();
+	initGUI();
 	_cueId = 0;
 }
 
 void milightMgr::update(float delta)
 {
 	updateLight(delta);
+	updateGUI();
 }
 
 void milightMgr::draw(int x, int y)
 {
 	drawCueTable(x, y);
-	drawLight(x + 300, y, 90, 300);
+	drawGUI(x + 250, y);
+	drawLight(x + 500, y, 90, 300);
+
 }
 
 void milightMgr::toCue(int cueNo)
@@ -124,15 +128,21 @@ void milightMgr::drawLight(int x, int y, int width, int height)
 #pragma region GUI
 void milightMgr::initGUI()
 {
-	_lightIdx = 0;
+	_lightNo = 0;
 	_lightGUI.setup();
+	
 	ofAddListener(_lightGUI.isUpdateE, this, &milightMgr::onGUIValueUpdate);
+
+	_lightGUI.add(_gLLightNo.set("Light No", ofToString(_lightNo)));
+	_lightGUI.add(_gCLightColor.set("RGB Color", ofColor(0, 0, 0)));
+	_lightGUI.add(_gSWarmWhite.set("Warm White", 0, 0, 255));
+	_lightGUI.add(_gSColdWhite.set("Cold White", 0, 0, 255));
 }
 
 void milightMgr::updateGUI()
 {
-	auto light = _lightList[_lightIdx];
-	_gLLightNo = ofToString(_lightIdx);
+	auto light = _lightList[_lightNo];
+	_gLLightNo = ofToString(_lightNo);
 	_gCLightColor.set(light.getColor());
 	_gSWarmWhite.set(light.getWarmWhite());
 	_gSColdWhite.set(light.getColdWhite());
@@ -140,16 +150,25 @@ void milightMgr::updateGUI()
 
 void milightMgr::drawGUI(int x, int y)
 {
+	_lightGUI.setPosition(x, y);
+	_lightGUI.draw();
 }
 
 void milightMgr::setLightIdx(int idx)
 {
-	_lightIdx = idx;
+	_lightNo = idx;
 	updateGUI();
 }
 
 void milightMgr::onGUIValueUpdate()
 {
+	milightCue cue;
+	cue._type = eCueToColor;
+	cue._color1 = _gCLightColor.get();
+	cue._coldWhiteVal1 = _gSColdWhite.get();
+	cue._warmWhiteVal1 = _gSWarmWhite.get();
+	cue._cueDuration = 1.0f;
+	_lightList[_lightNo].setCue(cue);
 }
 
 #pragma endregion

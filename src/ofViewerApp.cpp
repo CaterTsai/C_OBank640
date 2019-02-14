@@ -59,9 +59,9 @@ void ofViewerApp::draw()
 		ostringstream ss;
 		ss << (_isStart ? "Play" : "Stop") << endl;
 		ss << "Target :" + ofToString(_targetLayer);
-		ofDrawBitmapStringHighlight(ss.str(), ofVec2f(500, 70));
+		ofDrawBitmapStringHighlight(ss.str(), ofVec2f(600, 70));
 
-		_scenceMgr[_nowScence]->drawMsg(ofVec2f(500, 110));
+		_scenceMgr[_nowScence]->drawMsg(ofVec2f(600, 110));
 	}
 }
 
