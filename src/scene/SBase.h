@@ -8,7 +8,7 @@
 #include "ctrlMap.h"
 #include "postFilter.h"
 #include "videoMgr.h"
-
+#include "milightMgr.h"
 class SBase
 {
 public:

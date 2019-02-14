@@ -26,13 +26,31 @@ private:
 #pragma region Light Ctrl
 	//----------------------
 	//Light
-private:
+private:	
 	void initLight();
 	void updateLight(float delta);
 	void drawLight(int x, int y, int width, int height);
+
 private:
 	array<milightCtrl, cLightNum> _lightList;
 #pragma endregion
+
+#pragma region GUI
+private:
+	void initGUI();
+	void updateGUI();
+	void drawGUI(int x, int y);
+
+	void setLightIdx(int idx);
+	void onGUIValueUpdate();
+private:
+	ofxPanelEx _lightGUI;
+	ofParameter<string> _gLLightNo;
+	ofParameter<ofColor> _gCLightColor;
+	ofParameter<int> _gSWarmWhite, _gSColdWhite;
+	int _lightIdx;
+#pragma endregion
+
 
 #pragma region Cue Table
 	//----------------------

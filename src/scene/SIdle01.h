@@ -30,6 +30,8 @@ public:
 		displayMgr::GetInstance()->setBGMode(false, OF_GRADIENT_CIRCULAR);
 		displayMgr::GetInstance()->setBGColor(ofColor(50), ofColor(0));
 		displayMgr::GetInstance()->clearAllDisplay();
+
+		milightMgr::GetInstance()->toCue(0);
 		_dTrain.start();
 		
 	};

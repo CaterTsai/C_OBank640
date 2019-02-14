@@ -29,7 +29,9 @@ public:
 	void startFunc() override
 	{
 		displayMgr::GetInstance()->clearAllDisplay();
+		milightMgr::GetInstance()->toCue(eSFrance04);
 		videoMgr::GetInstance()->play(eVideoDarkOcean);
+
 	};
 	void stopFunc() override
 	{

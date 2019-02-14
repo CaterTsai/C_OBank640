@@ -30,7 +30,7 @@ public:
 		displayMgr::GetInstance()->setBGMode(false, OF_GRADIENT_LINEAR);
 		displayMgr::GetInstance()->setBGColor(ofColor(25, 25, 100), ofColor(10, 10, 50));
 		displayMgr::GetInstance()->clearAllDisplay();
-
+		milightMgr::GetInstance()->toCue(eSItaly04);
 		_dr.start();
 	};
 	void stopFunc() override

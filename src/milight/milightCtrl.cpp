@@ -67,6 +67,10 @@ void milightCtrl::setCue(milightCue& cue)
 	}
 	case eCueToLoop:
 	{
+		_animColor.setDuration(cue._cueDuration);
+		_animWarmWhite.setDuration(cue._cueDuration);
+		_animColdWhite.setDuration(cue._cueDuration);
+
 		_animColor.animateTo(cue._color1);
 		_animWarmWhite.animateTo(cue._warmWhiteVal1);
 		_animColdWhite.animateTo(cue._coldWhiteVal1);

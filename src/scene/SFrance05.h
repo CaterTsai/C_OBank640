@@ -28,6 +28,7 @@ public:
 		displayMgr::GetInstance()->setBGMode(false, OF_GRADIENT_LINEAR);
 		displayMgr::GetInstance()->setBGColor(ofColor(0), ofColor(20, 0, 50));
 		displayMgr::GetInstance()->clearAllDisplay();
+		milightMgr::GetInstance()->toCue(eSFrance05);
 		_dTail.start();
 
 	};

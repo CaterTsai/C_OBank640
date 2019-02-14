@@ -53,6 +53,7 @@ public:
 		displayMgr::GetInstance()->setBGMode(false, OF_GRADIENT_LINEAR);
 		displayMgr::GetInstance()->setBGColor(ofColor(0), ofColor(20, 0, 50));
 		displayMgr::GetInstance()->clearAllDisplay();
+		milightMgr::GetInstance()->toCue(eSFrance03);
 		_dSP.setBaseSize(cDisplayCanvasHeight * 0.3);
 		_dSP.setParticleColor(ofColor(204, 51, 101));
 		_dSP.start();

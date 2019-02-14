@@ -199,7 +199,7 @@ void milightCueTable::initGUI()
 
 	_lightGUI.add(_gSState.set("Light State", 0, 0, 3));
 	_lightGUI.add(_gLLightState.set("State Name", cTypeName[0]));
-	_lightGUI.add(_gSCueDuration.set("Cue In¡@Duration", 0, 0, 20));
+	_lightGUI.add(_gSCueDuration.set("Cue In¡@Duration", 0, 0, 5));
 
 	_lightGUI.add(_gCLightColor.set("RGB Color", ofColor(0, 0, 0)));
 	_lightGUI.add(_gSWarmWhite.set("Warm White", 0, 0, 255));

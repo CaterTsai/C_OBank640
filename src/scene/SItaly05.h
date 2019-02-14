@@ -34,7 +34,7 @@ public:
 		displayMgr::GetInstance()->setBGMode(false, OF_GRADIENT_LINEAR);
 		displayMgr::GetInstance()->setBGColor(ofColor(25, 25, 100), ofColor(10, 10, 50));
 		displayMgr::GetInstance()->clearAllDisplay();
-
+		milightMgr::GetInstance()->toCue(eSItaly05);
 		_dShooting.start();
 	};
 	void stopFunc() override

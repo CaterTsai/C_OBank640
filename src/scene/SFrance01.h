@@ -31,6 +31,8 @@ public:
 		displayMgr::GetInstance()->setBGMode(false, OF_GRADIENT_LINEAR);
 		displayMgr::GetInstance()->setBGColor(ofColor(24, 168, 235), ofColor(194, 234, 255));
 		displayMgr::GetInstance()->clearAllDisplay();
+
+		milightMgr::GetInstance()->toCue(eSFrance01);
 		_dCloud.start();
 	};
 	void stopFunc() override 

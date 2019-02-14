@@ -113,13 +113,47 @@ void milightMgr::drawLight(int x, int y, int width, int height)
 		ofSetColor(255);
 		ofDrawRectangle(pos, unitW * 3, unitH);
 		ofPopStyle();
-
-		
 		pos.y += unitH;
 	}
 	ofPopMatrix();
 }
+
+
 #pragma endregion
+
+#pragma region GUI
+void milightMgr::initGUI()
+{
+	_lightIdx = 0;
+	_lightGUI.setup();
+	ofAddListener(_lightGUI.isUpdateE, this, &milightMgr::onGUIValueUpdate);
+}
+
+void milightMgr::updateGUI()
+{
+	auto light = _lightList[_lightIdx];
+	_gLLightNo = ofToString(_lightIdx);
+	_gCLightColor.set(light.getColor());
+	_gSWarmWhite.set(light.getWarmWhite());
+	_gSColdWhite.set(light.getColdWhite());
+}
+
+void milightMgr::drawGUI(int x, int y)
+{
+}
+
+void milightMgr::setLightIdx(int idx)
+{
+	_lightIdx = idx;
+	updateGUI();
+}
+
+void milightMgr::onGUIValueUpdate()
+{
+}
+
+#pragma endregion
+
 
 #pragma region Cue Table
 void milightMgr::initCueTable()

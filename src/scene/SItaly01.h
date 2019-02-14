@@ -33,6 +33,7 @@ public:
 		displayMgr::GetInstance()->setBGMode(false, OF_GRADIENT_LINEAR);
 		displayMgr::GetInstance()->setBGColor(ofColor(135, 206, 235), ofColor(240, 248, 255));
 		displayMgr::GetInstance()->clearAllDisplay();
+		milightMgr::GetInstance()->toCue(eSItaly01);
 		videoMgr::GetInstance()->play(eVideoEndlessOcean);
 	};
 	void stopFunc() override

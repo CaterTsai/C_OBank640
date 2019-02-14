@@ -221,7 +221,7 @@ void ofViewerApp::initScene()
 	_scenceMgr.push_back(ofPtr<SItaly05>(new SItaly05()));
 	_scenceMgr.push_back(ofPtr<SItaly06>(new SItaly06()));
 
-	_nowScence = eSItaly06;
+	_nowScence = eSIdle01;
 }
 
 

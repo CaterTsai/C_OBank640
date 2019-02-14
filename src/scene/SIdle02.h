@@ -29,6 +29,7 @@ public:
 		displayMgr::GetInstance()->setBGMode(true);
 		displayMgr::GetInstance()->setBGColor(ofColor(0));
 		displayMgr::GetInstance()->clearAllDisplay();
+		milightMgr::GetInstance()->toCue(eSIdle02);
 		_dTrain.start();
 
 	};

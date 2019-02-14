@@ -31,6 +31,7 @@ public:
 		displayMgr::GetInstance()->setBGMode(false, OF_GRADIENT_LINEAR);
 		displayMgr::GetInstance()->setBGColor(ofColor(12, 255, 161), ofColor(19, 150, 56));
 		displayMgr::GetInstance()->clearAllDisplay();
+		milightMgr::GetInstance()->toCue(eSFrance02);
 		_dBreeze.start();
 	};
 	void stopFunc() override 

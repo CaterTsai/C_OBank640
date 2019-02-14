@@ -29,6 +29,7 @@ public:
 	void startFunc() override 
 	{
 		displayMgr::GetInstance()->clearAllDisplay();
+		milightMgr::GetInstance()->toCue(eSFrance07);
 		videoMgr::GetInstance()->play(eVideoWaterWave);
 	};
 	void stopFunc() override 
