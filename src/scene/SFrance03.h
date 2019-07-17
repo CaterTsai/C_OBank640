@@ -43,7 +43,8 @@ public:
 	void drawMsg(ofVec2f pos) override 
 	{
 		ostringstream ss;
-		ss << getSceneName();
+		ss << getSceneName() << endl;
+		ss << "Knob 1 : particle size\n";
 		ofDrawBitmapStringHighlight(ss.str(), pos);
 	};
 	void startFunc() override 
@@ -62,7 +63,13 @@ public:
 	{
 		_dSP.stop();
 	};
-	void control(eCtrlType ctrl, int value = cMidiButtonPress) override {};
+	void control(eCtrlType ctrl, int value = cMidiButtonPress) override 
+	{
+		if (ctrl == eCtrlType::eCtrl_ViewKnob1)
+		{
+			_dSP.setParticleSize(value / (float)cMidiValueMax);
+		}
+	};
 	string getSceneName() { return "SFrance03"; }
 
 private:

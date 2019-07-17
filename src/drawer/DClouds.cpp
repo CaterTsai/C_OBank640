@@ -88,7 +88,7 @@ void DClouds::cloudUnit::init()
 			tx = cWindowWidth + ofRandom(-200, 200);
 		}
 	}
-	int y = ofRandom(cWindowHeight * 0.65, cWindowHeight);
+	int y = ofRandom(cWindowHeight * 0.3, cWindowHeight);
 	_source.set(sx, y);
 	_target.set(tx, y);
 
@@ -191,17 +191,27 @@ void DClouds::trigger(int key)
 //---------------------------------
 void DClouds::setPEmmiterT(float t)
 {
-	_pEmmiterT = t;
+	_pEmmiterT = ofMap(t, 0, 1, cCloudPEmitterSlow, cCloudPEmitterFast);;
 }
 
 void DClouds::setCEmmiterT(float t)
 {
-	_cEmmiterT = t;
+	_cEmmiterT = ofMap(t, 0, 1, cCloudCEmitterSlow, cCloudCEmitterFast);
 }
 
 void DClouds::setColorR(float r)
 {
-	_color.r = r;
+	_color.r = ofMap(r, 0, 1, 0, 255);
+}
+
+void DClouds::setColorG(float g)
+{
+	_color.g = ofMap(g, 0, 1, 0, 255);
+}
+
+void DClouds::setColorB(float b)
+{
+	_color.b = ofMap(b, 0, 1, 0, 255);
 }
 
 //---------------------------------
@@ -255,7 +265,7 @@ void DClouds::emitter(float delta)
 		{
 			addPartical();
 		}
-		
+
 		_pTimer = _pEmmiterT * ofRandom(0.8, 1.2);
 	}
 

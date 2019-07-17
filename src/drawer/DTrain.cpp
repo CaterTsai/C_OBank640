@@ -55,6 +55,11 @@ void DTrain::trainUnit::draw()
 	ofPushMatrix();
 	ofTranslate(_center);
 	videoMgr::GetInstance()->draw(_videoType, _width, _height);
+	
+	ofNoFill();
+	ofSetLineWidth(10);
+	ofDrawRectangle(_width * -0.5, _height * -0.5, _width, _height);
+
 	ofPopMatrix();
 	ofPopStyle();
 
@@ -90,6 +95,22 @@ void DTrain::draw()
 	{
 		iter.draw();
 	}
+
+	//ofPushStyle();
+	//ofSetColor(255);
+	//ofNoFill();
+	//ofSetLineWidth(30);
+	//
+	//ofPushMatrix();
+	//ofVec3f center(0);
+	//for (int i = 0; i < cTrainSpaceLineNum; i++)
+	//{
+	//	center.z -= 300;
+	//	ofDrawRectangle(center, cWindowWidth, cWindowWidth);
+	//}
+	//ofPopMatrix();
+	//ofPopStyle();
+
 	ofSetDepthTest(false);
 }
 

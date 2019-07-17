@@ -13,6 +13,9 @@ const float cDPThetaLimit = 10 * DEG_TO_RAD;
 const float cDPNearLimit = 0.2;
 const float cDPCheckTriT = 0.1f;
 
+const float cDPMaxSize = 0.05f;
+const float cDPMinSize = 0.001f;
+
 class DSphereParticle : public DBase
 {
 
@@ -54,6 +57,7 @@ public:
 	DSphereParticle()
 		:DBase(eDSphereParticle)
 		, _baseSize(1.0)
+		, _pSize(0.01)
 		, _pColor(255)
 	{
 		_tri.setMode(ofPrimitiveMode::OF_PRIMITIVE_TRIANGLES);
@@ -66,13 +70,14 @@ public:
 	void start() override;
 	void stop() override;
 	void setBaseSize(float size);
+	void setParticleSize(float size);
 	void setParticleColor(ofColor c);
 private:
 	void generateParticle();
 
 	void computeTri();
 private:
-	float _baseSize;
+	float _baseSize, _pSize;
 	bool _triCheck[cDPNumber];
 	array<DSphereParticle::particle, cDPNumber> _particleList;
 	ofMesh _tri;

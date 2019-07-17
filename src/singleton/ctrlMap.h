@@ -23,6 +23,8 @@ enum eCtrlType : int
 	, eCtrl_Filter9
 	, eCtrl_ChangeFilterTarget
 	, eCtrl_DisableAllFilter
+	, eCtrl_NextTargetLight
+	, eCtrl_PrevTargetLight
 	, eCtrl_NextScence
 	, eCtrl_PrevScence
 	, eCtrl_DisplayEach

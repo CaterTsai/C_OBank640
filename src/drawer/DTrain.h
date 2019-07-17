@@ -9,6 +9,7 @@ const int cTrainUnitNum = 8;
 const float cTrainUnitMaxDuration = 60.0f;
 const float cTrainCheckMaxDuration = 10.0f;
 const int cTrainUnitMaxWidth = 480;
+const int cTrainSpaceLineNum = 30;
 
 class DTrain : public DBase
 {

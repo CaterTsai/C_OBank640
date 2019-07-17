@@ -22,7 +22,8 @@ public:
 	void drawMsg(ofVec2f pos) override
 	{
 		ostringstream ss;
-		ss << getSceneName();
+		ss << getSceneName() << endl;
+		ss << "Slider 1 : Rain Level\n";
 		ofDrawBitmapStringHighlight(ss.str(), pos);
 	};
 	void startFunc() override
@@ -37,7 +38,13 @@ public:
 	{
 		_dr.stop();
 	};
-	void control(eCtrlType ctrl, int value = cMidiButtonPress) override {};
+	void control(eCtrlType ctrl, int value = cMidiButtonPress) override 
+	{
+		if (ctrl == eCtrl_ViewSlider1)
+		{
+			_dr.setRainLevel(value / (float)cMidiValueMax);
+		}
+	};
 	string getSceneName() { return "SItaly04"; }
 
 private:

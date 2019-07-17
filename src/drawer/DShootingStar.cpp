@@ -121,11 +121,11 @@ void DShootingStar::start()
 {
 	_isStart = true;
 
-	_starLimit = 30;
-	_starMaxT = 3.0f;
+	_starLimit = 100;
+	_starMaxT = cStarLifeMaxT;
 	_starTimer = ofRandom(0.5, 1.0) * _starMaxT;
 
-	_shootingMaxT = 1.0f;
+	_shootingMaxT = cShootingMaxT;
 	_shootingTimer = ofRandom(0.5, 1.0) * _shootingMaxT;
 
 }
@@ -136,6 +136,16 @@ void DShootingStar::stop()
 
 	_shootingMgr.clear();
 	_starMgr.clear();
+}
+
+void DShootingStar::setStarAddMaxTimer(float t)
+{
+	_starMaxT = ofMap(t, 0, 1, cStarLifeMaxT, 1.0f);
+}
+
+void DShootingStar::setShootingAddMaxTimer(float t)
+{
+	_shootingMaxT = ofMap(t, 0, 1, cShootingMaxT, 0.2);
 }
 
 //--------------------------------------------

@@ -55,9 +55,9 @@ void ctrlMap::initMidi2Ctrl()
 	midi2Ctrl[eMidiTriggerM8] = eCtrl_Filter6;
 	midi2Ctrl[eMidiTriggerR6] = eCtrl_Filter7;
 	midi2Ctrl[eMidiTriggerR7] = eCtrl_Filter8;
-	midi2Ctrl[eMidiTriggerR8] = eCtrl_Filter9;
-	midi2Ctrl[eMidiTrackPrev] = eCtrl_DisableAllFilter;
-	midi2Ctrl[eMidiTrackNext] = eCtrl_ChangeFilterTarget;
+	midi2Ctrl[eMidiTriggerR8] = eCtrl_DisableAllFilter;
+	midi2Ctrl[eMidiTrackPrev] = eCtrl_PrevTargetLight;
+	midi2Ctrl[eMidiTrackNext] = eCtrl_NextTargetLight;
 
 	
 	midi2Ctrl[eMidiTriggerS1] = eCtrl_ViewTrigger1;
@@ -75,9 +75,13 @@ void ctrlMap::initMidi2Ctrl()
 	midi2Ctrl[eMidiTriggerR3] = eCtrl_ViewTrigger11;
 	midi2Ctrl[eMidiTriggerR4] = eCtrl_ViewTrigger12;
 
-	midi2Ctrl[eMidiSlider1] = eCtrl_ViewKnob1;
-	midi2Ctrl[eMidiSlider2] = eCtrl_ViewKnob2;
-	midi2Ctrl[eMidiSlider3] = eCtrl_ViewKnob3;
+	midi2Ctrl[eMidiSlider1] = eCtrl_ViewSlider1;
+	midi2Ctrl[eMidiSlider2] = eCtrl_ViewSlider2;
+	midi2Ctrl[eMidiSlider3] = eCtrl_ViewSlider3;
+
+	midi2Ctrl[eMidiKnob1] = eCtrl_ViewKnob1;
+	midi2Ctrl[eMidiKnob2] = eCtrl_ViewKnob2;
+	midi2Ctrl[eMidiKnob3] = eCtrl_ViewKnob3;
 
 }
 

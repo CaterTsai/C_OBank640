@@ -80,6 +80,7 @@ void displayMgr::drawDisplay(int x, int y, int w, int h)
 {
 	ofPushStyle();
 	ofSetColor(255);
+
 	if (_isSingleColor)
 	{
 		ofBackground(_displayBGColorFrom);
@@ -94,8 +95,9 @@ void displayMgr::drawDisplay(int x, int y, int w, int h)
 	{
 		iter.draw(x, y, w, h);
 	}
-
 	_cover.draw(0, 0, cDisplayCanvasWidth, cDisplayCanvasHeight);
+
+
 
 	ofSetColor(0, _displayCoverAlpha);
 	ofFill();

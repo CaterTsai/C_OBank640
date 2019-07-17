@@ -109,7 +109,8 @@ void DBreeze::start()
 	_isStart = true;
 	_color = cBreezBaseColor;
 	_timer = _emitterT = cBreezEmitterSlow;
-	_type = ePTypeRandom;
+	_emitterNum = cBreezEmitterNumMin;
+	_type = ePType2DRandom;
 }
 
 //--------------------------------------
@@ -138,13 +139,13 @@ void DBreeze::setEmitter(ePType type)
 //--------------------------------------
 void DBreeze::setEmitterT(float v)
 {
-	_emitterT = v;
+	_emitterT = ofMap(v, 0, 1, cBreezEmitterSlow, cBreezEmitterFast);
 }
 
 //--------------------------------------
 void DBreeze::setEmitterNum(int num)
 {
-	_emitterNum = num;
+	_emitterNum = ofMap(num, 0, 1, cBreezEmitterNumMin, cBreezEmitterNumMax);
 }
 
 void DBreeze::setColorR(int R)

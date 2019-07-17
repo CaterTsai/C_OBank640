@@ -37,7 +37,7 @@ private:
 
 #pragma region GUI
 public:
-	void setLightIdx(int idx);
+	void nextLightIdx();
 private:
 	void initGUI();
 	void updateGUI();

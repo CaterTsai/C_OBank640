@@ -13,7 +13,7 @@ const float cCloudPEmitterSlow = 3.0f;
 const float cCloudPEmitterFast = 0.5f;
 const float cCloudCEmitterSlow = 4.0f;
 const float cCloudCEmitterFast = 2.0f;
-const ofColor cCloudBaseColor(0, 203, 207);
+const ofColor cCloudBaseColor(255, 255, 255);
 
 class DClouds : public DBase
 {
@@ -68,6 +68,8 @@ public:
 	void setPEmmiterT(float t);
 	void setCEmmiterT(float t);
 	void setColorR(float r);
+	void setColorG(float g);
+	void setColorB(float b);
 
 private:
 	void loadClouds();

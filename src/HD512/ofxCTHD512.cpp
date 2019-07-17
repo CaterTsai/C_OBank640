@@ -62,7 +62,7 @@ void ofxCTHD512::checkBuffer()
 {
 	for (int i = 0; i < 512; i++)
 	{
-		if (_dataBuffer[i] != _sendBuffer[i])
+		//if (_dataBuffer[i] != _sendBuffer[i])
 		{
 			DMXSend(i + 1, _sendBuffer[i]);
 		}

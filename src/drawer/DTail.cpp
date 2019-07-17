@@ -241,19 +241,19 @@ void DTail::trigger(int key)
 //--------------------------------------
 void DTail::setEmitterT(float t)
 {
-	_emitterT = t;
+	_emitterT = ofMap(t, 0.0, 1.0, cTailEmitterTSlow, cTailEmitterTFast);
 }
 
 //--------------------------------------
 void DTail::setEmitterNum(int num)
 {
-	_emitterNum = num;
+	_emitterNum = ofMap(num, 0.0, 1.0, cTailEmitterNumMin, cTailEmitterNumMax);
 }
 
 //--------------------------------------
 void DTail::setColor(float r)
 {
-	_color.r = r;
+	_color.r = ofMap(r, 0, 1, 0, 255);
 }
 
 //--------------------------------------

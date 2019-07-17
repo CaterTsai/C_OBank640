@@ -14,6 +14,7 @@ void milightMgr::update(float delta)
 {
 	updateLight(delta);
 	updateGUI();
+	ofxCTHD512::GetInstance()->update(delta);
 }
 
 void milightMgr::draw(int x, int y)
@@ -154,9 +155,9 @@ void milightMgr::drawGUI(int x, int y)
 	_lightGUI.draw();
 }
 
-void milightMgr::setLightIdx(int idx)
+void milightMgr::nextLightIdx()
 {
-	_lightNo = idx;
+	_lightNo = (_lightNo + 1) % _lightList.size();
 	updateGUI();
 }
 

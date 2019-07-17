@@ -5,10 +5,10 @@
 #include "DBase.h"
 
 const ofRectangle cShootingStarRange(0, 0, cWindowWidth, cWindowHeight);
-const float cStarLifeMaxT = 5.0f;
+const float cStarLifeMaxT = 10.0f;
 const int cStarMaxAddNum = 10;
 const float cShootingMaxDistance = cShootingStarRange.height * 0.8;
-const float cShootingMaxT = 1.0f;
+const float cShootingMaxT = 5.0f;
 
 class DShootingStar : public DBase
 {
@@ -53,6 +53,9 @@ public:
 
 	void start() override;
 	void stop() override;
+
+	void setStarAddMaxTimer(float t);
+	void setShootingAddMaxTimer(float t);
 
 private:
 	void checkStar(float delta);

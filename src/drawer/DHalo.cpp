@@ -100,8 +100,8 @@ void DHalo::start()
 	_isStart = true;
 	_addTimer = 0.0f;
 
-	_fromColor.set(34, 212, 0, 50);
-	_toColor.set(34, 212, 200, 50);
+	_fromColor.set(34, 212, 0, 100);
+	_toColor.set(34, 212, 200, 100);
 }
 
 void DHalo::stop()
@@ -149,7 +149,7 @@ void DHalo::addNewHaloUnit()
 	float t = ofRandom(0.3, 1.0)* cHaloUnitMaxDuration;
 	ofVec2f fromPos, toPos;
 	fromPos.x = ofRandom(0, cWindowWidth);
-	fromPos.y = ofRandom(cWindowHeight * 0.5, cWindowHeight);
+	fromPos.y = ofRandom(0, cWindowHeight);
 	toPos = fromPos;
 	if (fromPos.x >= cWindowWidth * 0.5)
 	{

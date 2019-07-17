@@ -2,7 +2,7 @@
 #include "milightMgr.h"
 #include "displayMgr.h"
 #include "videoMgr.h"
-
+#include "ofxCTHD512.h"
 #pragma region Basic
 void ofViewerApp::setup()
 {
@@ -32,6 +32,7 @@ void ofViewerApp::update()
 	videoMgr::GetInstance()->update();
 	_scenceMgr[_nowScence]->update(delta);
 	milightMgr::GetInstance()->update(delta);
+	
 	ofSetWindowTitle(ofToString(ofGetFrameRate()));
 }
 
@@ -144,6 +145,14 @@ void ofViewerApp::control(eCtrlType ctrl, int value)
 			_nowScence = nextScence;
 			displayMgr::GetInstance()->clearAllDisplay();
 
+		}
+		break;
+	}
+	case eCtrl_NextTargetLight:
+	{
+		if (value == cMidiButtonPress)
+		{
+			milightMgr::GetInstance()->nextLightIdx();
 		}
 		break;
 	}

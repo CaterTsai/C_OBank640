@@ -35,7 +35,7 @@ void ofDisplayerApp::newMidiMessage(ofxMidiMessage & msg)
 	auto type = ctrlMap::GetInstance()->midi2Ctrl[msg.control];
 	if (type == eCtrl_ChangeProjectAlpha)
 	{
-		displayMgr::GetInstance()->setCoverAlpha(ofMap(msg.value, 0, 127, 0, 255));
+		displayMgr::GetInstance()->setCoverAlpha(ofMap(msg.value, 0, 127, 255, 0));
 	}
 
 }

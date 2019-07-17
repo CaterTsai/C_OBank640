@@ -78,7 +78,7 @@ void DSphereParticle::draw(int x, int y, int z)
 	{
 		for (auto& iter : _particleList)
 		{
-			ofDrawSphere(iter._pos, _baseSize * 0.05);
+			ofDrawSphere(iter._pos, _baseSize * _pSize);
 		}
 				
 		//if (_tri.hasIndices())
@@ -114,6 +114,11 @@ void DSphereParticle::stop()
 void DSphereParticle::setBaseSize(float size)
 {
 	_baseSize = size;
+}
+
+void DSphereParticle::setParticleSize(float size)
+{
+	_pSize = ofMap(size, 0, 1, cDPMinSize, cDPMaxSize);
 }
 
 void DSphereParticle::setParticleColor(ofColor c)

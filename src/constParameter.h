@@ -2,6 +2,8 @@
 
 #include "ofMain.h"
 
+#define PROJECTION_MODE
+
 const int cWindowWidth = 1920;
 const int cWindowHeight = 1080;
 

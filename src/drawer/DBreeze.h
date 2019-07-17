@@ -12,8 +12,8 @@ const float cBreezParticalSizeMax = 20.0f;
 const float cBreezEmitterSlow = 1.0f;
 const float cBreezEmitterFast = 0.2f;
 const int cBreezEmitterNumMin = 1;
-const int cBreezEmitterNumMax = 5;
-const ofColor cBreezBaseColor(0, 75, 129);
+const int cBreezEmitterNumMax = 10;
+const ofColor cBreezBaseColor(200, 200, 200);
 
 class DBreeze : public DBase
 {

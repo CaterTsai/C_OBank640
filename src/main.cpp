@@ -10,15 +10,15 @@ int main( ){
 #ifdef PROJECTION_MODE
 	ofGLFWWindowSettings settings_;
 	//Projection Window
-	settings_.width = cProjectionWindowWidth;
-	settings_.height = cProjectionWindowHeight;
+	settings_.width = cWindowWidth;
+	settings_.height = cWindowHeight;
 	settings_.setPosition(ofVec2f(1920, 0));
 	settings_.resizable = false;
 	shared_ptr<ofAppBaseWindow> displaerWindow = ofCreateWindow(settings_);
 
 	//View Window
-	settings_.width = cViewWindowWidth;
-	settings_.height = cViewWindowHeight;
+	settings_.width = cViewWidth;
+	settings_.height = cViewHeight;
 	settings_.setPosition(ofVec2f(0, 0));
 	settings_.shareContextWith = displaerWindow;
 	shared_ptr<ofAppBaseWindow> viewWindow = ofCreateWindow(settings_);
